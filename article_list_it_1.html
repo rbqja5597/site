@@ -57,7 +57,7 @@
 <!-- 메타태그정보 //-->
 <!-- META -->
 <link rel="canonical" href="https://ssg.gyubeom.com" />
-<meta name="subject" content="공지사항"/>
+<meta name="subject" content="초보 개발자 일상 블로그"/>
 <meta name="title" content="K_BLOG" />
 <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
 <meta name="copyright" content="K_BLOG" />
@@ -66,12 +66,8 @@
 <!-- OPENGRAPH -->
 <meta property="og:site_name" content="K_BLOG" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="공지사항" />
-<meta property="og:description" content=" 공지사항
- 개발자 블로그
-
-환영합니다
-" />
+<meta property="og:title" content="초보 개발자 일상 블로그" />
+<meta property="og:description" content="일상 관련 글들을 공유합니다." />
 <meta property="og:locale" content="ko_KR" />
 <meta property="og:image" content="/img/logo/logo_opengraph.png" />
 <meta property="og:image:alt" content="ssg.gyubeom.com" />
@@ -82,23 +78,15 @@
 <meta property="og:url" content="https://ssg.gyubeom.com" />
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="공지사항" />
+<meta name="twitter:title" content="초보 개발자 일상 블로그" />
 <meta name="twitter:site" content="@K_BLOG" />
 <meta name="twitter:creator" content="@K_BLOG" />
 <meta name="twitter:image" content="/img/logo/logo_opengraph.png">
-<meta name="twitter:description" content=" 공지사항
- 개발자 블로그
-
-환영합니다
-" />
+<meta name="twitter:description" content="일상 관련 글들을 공유합니다." />
 <!-- GOOGLE+ -->
 <meta itemprop="headline" content="K_BLOG" />
 <meta itemprop="name" content="K_BLOG" />
-<meta itemprop="description" content=" 공지사항
- 개발자 블로그
-
-환영합니다
-" />
+<meta itemprop="description" content="일상 관련 글들을 공유합니다." />
 <meta itemprop="image" content="/img/logo/logo_opengraph.png" />
 
 
@@ -106,7 +94,7 @@
 
 
 
-<title>공지사항 K_BLOG | ARTICLE DETAIL</title>
+<title> K_BLOG | ARTICLE LIST IT</title>
 <!-- 폰트어썸 불러오기 -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -192,7 +180,7 @@
   <main class="flex-grow-1">
     <section class="title-bar con-min-width">
       <h1 class="con">
-      		<i class="fas fa-file-alt"></i> <span>게시물 상세</span>
+      		<i class="fas fa-clipboard-list"></i> <span> IT 게시판 </span>
       </h1>
     </section>
 
@@ -202,107 +190,29 @@
 	
  
 
-<!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
-<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
-
-<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
-<!-- 토스트 UI 에디터, CSS 코어 -->
-<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
- 
- <!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
-<script src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight.min.js"></script>
- 
-
- 
  <section class="section-1 con-min-width">
- 
- <div class="con">
- 	
- 	<div class="article-detail">
-          
-          <h2 class="article-detail__title">
-            공지사항
-          </h2>
-
-          <div class="article-detail__sub-info flex">
-            <div class="article-detail__board-name">공지사항</div>
-            <div class="article-detail__reg-date">
-              2021-01-04 07:32:14
+      <div class="con">
+        <div class="article-list">
+          <header>
+            <div>
+              <div class="article-list__cell-id">번호</div>
+              <div class="article-list__cell-reg-date">날짜</div>
+              <div class="article-list__cell-writer">작성자</div>
+              <div class="article-list__cell-title">제목</div>
             </div>
-            <div class="article-detail__writer">
-              김규범
-            </div>
-          </div>
-          
-          <div class="article-detail__body main-font">
-              # 공지사항
-- 개발자 블로그
-```
-환영합니다
-```
-          </div>
-          
-          <div class="article-detail__reply-box">
-          <div id="disqus_thread"></div>
-			<script>
-			 var disqus_config = function() {
-				 this.page.url = 'https://ssg.gyubeom.com/article_detail_1.html';
-				 this.page.idenfifer = 'article_detail_1.html';
-			 };
-			 (function() { // DON'T EDIT BELOW THIS LINE
-   			 var d = document, s = d.createElement('script');
-   			 s.src = 'https://enkung.disqus.com/embed.js';
-   			 s.setAttribute('data-timestamp', +new Date());
-   			 (d.head || d.body).appendChild(s);
-   	 		})();
-			</script>
-			<noscript>Please enable JavaScript to view the 
-			<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-			</noscript>
-          </div>
-          
-          <div class="article-detail__menu flex">
-            <a  title="" href="article_detail_0.html" class="hover-underline none">&lt; 이전글</a>
-            <a href="article_list_notice_1.html" class="hover-underline ">목록</a>
-            <a title="" href="article_detail_0.html" class="hover-underline none">다음글 &gt;</a>
-          </div>
+          </header>
+          <main>
+           		<div><div class="article-list__cell-id">4</div><div class="article-list__cell-reg-date">2021-01-04 07:32:14</div><div class="article-list__cell-writer">김규범</div><div class="article-list__cell-title"><a href="article_detail_4.html" class="hover-underline">1강. JAVA란?</a></div></div> 
+          </main>
         </div>
+        
+        <div class="article-page-menu">
+          <ul class="flex flex-jc-c">
+           		<li><a href="article_list_it_1.html" class="flex flex-ai-c article-page-menu__link--selected">1</a></li> 
+          </ul>
         </div>
-      </section>
-      
-<script>
-function ArticleDetail__Body__init() {
-	if ( toastui === undefined ) {
-		return;
-	}
-	
-	var body = document.querySelector('.article-detail__body');
-	var initialValue = body.innerHTML.trim();
-	
-	var viewer = new toastui.Editor.factory({
-		el : body,
-		initialValue : initialValue,
-		viewer : true,
-	    plugins: [toastui.Editor.plugin.codeSyntaxHighlight]
-	});
-}
-
-ArticleDetail__Body__init();
-
-
-
-
-</script>
-</main>
+      </div>
+    </section></main>
 
   <footer class="bottom-bar con-min-width">
     <div class="con flex flex-ai-c">
