@@ -11,6 +11,42 @@
   gtag('js', new Date());
 
   gtag('config', 'G-KED6T5WE07');
+  
+  
+  function go_top(orix,oriy,desx,desy) {
+	    var Timer;
+	    if (document.body.scrollTop == 0) {
+	        var winHeight = document.documentElement.scrollTop;
+	    } else {
+	        var winHeight = document.body.scrollTop;
+	    }
+	    if(Timer) clearTimeout(Timer);
+	    startx = 0;
+	    starty = winHeight;
+	    if(!orix || orix < 0) orix = 0;
+	    if(!oriy || oriy < 0) oriy = 0;
+	    var speed = 7;
+	    if(!desx) desx = 0 + startx;
+	    if(!desy) desy = 0 + starty;
+	    desx += (orix - startx) / speed;
+	    if (desx < 0) desx = 0;
+	    desy += (oriy - starty) / speed;
+	    if (desy < 0) desy = 0;
+	    var posX = Math.ceil(desx);
+	    var posY = Math.ceil(desy);
+	    window.scrollTo(posX, posY);
+	    if((Math.floor(Math.abs(startx - orix)) < 1) && (Math.floor(Math.abs(starty - oriy)) < 1)){
+	        clearTimeout(Timer);
+	        window.scroll(orix,oriy);
+	    }else if(posX != orix || posY != oriy){
+	        Timer = setTimeout("go_top("+orix+","+oriy+","+desx+","+desy+")",15);
+	    }else{
+	        clearTimeout(Timer);
+	    }
+	}
+  
+  
+  
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,8 +61,8 @@
 <meta name="title" content="K_BLOG" />
 <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
 <meta name="copyright" content="K_BLOG" />
-<meta name="pubdate" content="2021-01-04T05:58:54" />
-<meta name="lastmod" content="2021-01-04T05:58:54" />
+<meta name="pubdate" content="2021-01-04T07:19:34" />
+<meta name="lastmod" content="2021-01-04T07:19:34" />
 <!-- OPENGRAPH -->
 <meta property="og:site_name" content="K_BLOG" />
 <meta property="og:type" content="website" />
@@ -37,8 +73,8 @@
 <meta property="og:image:alt" content="ssg.gyubeom.com" />
 <meta property="og:image:width" content="486" />
 <meta property="og:image:height" content="254" />
-<meta property="og:updated_time" content="2021-01-04T05:58:54"/>
-<meta property="og:pubdate" content="2021-01-04T05:58:54" />
+<meta property="og:updated_time" content="2021-01-04T07:19:34"/>
+<meta property="og:pubdate" content="2021-01-04T07:19:34" />
 <meta property="og:url" content="https://ssg.gyubeom.com" />
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image" />
@@ -52,7 +88,6 @@
 <meta itemprop="name" content="K_BLOG" />
 <meta itemprop="description" content="일상 관련 글들을 공유합니다." />
 <meta itemprop="image" content="/img/logo/logo_opengraph.png" />
-
 
 
 
@@ -98,7 +133,7 @@
           <li>
             <a class="block">
               <i class="fas fa-list"></i>
-              <span>게시판</span>
+              <span>ARTICLES</span>
             </a>
             <ul>
               	<li><a href="article_list_free_1.html" class="block"><i class="fab fa-free-code-camp"></i> <span>자유 게시판</span></a></li><li><a href="article_list_notice_1.html" class="block"><i class="fas fa-flag"></i> <span>공지사항 게시판</span></a></li>
@@ -107,7 +142,7 @@
           <li>
             <a class="block">
               <i class="fas fa-link"></i>
-              <span>링크</span>
+              <span>LINK</span>
             </a>
             <ul>
               <li>
@@ -149,6 +184,11 @@
       </h1>
     </section>
 
+	
+	
+	
+	
+ 
 
  <section class="section-1 con-min-width">
       <div class="con">
@@ -189,8 +229,22 @@
       <br><br>
       <i class="far fa-copyright"></i>
         Copyright K_BLOG. All rights reserved.
+        
+        
+        
+        <span onclick="go_top();">
+        <i class="go-top">
+        <i class="fas fa-angle-up icons"></i>
+        </i>
+        </span>
+        
+        
       </div>
+      
+
     </div>
+    
+    
   </footer>
 </div>
 
