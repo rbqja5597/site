@@ -94,7 +94,7 @@
 
 
 
-<title> K_BLOG | HOME</title>
+<title> K_BLOG | ARTICLE SEARCH</title>
 <!-- 폰트어썸 불러오기 -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -189,7 +189,7 @@
   <main class="flex-grow-1">
     <section class="title-bar con-min-width">
       <h1 class="con">
-      		<i class="fas fa-home"></i> <span>HOME</span>
+      		<i class="fas fa-search"></i> <span>ARTICLE SEARCH</span>
       </h1>
     </section>
 
@@ -199,18 +199,45 @@
 	
  
 
- <section class="section-1 con-min-width">
+<!-- lodash 불러오기 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+
+<!-- vue 불러오기 -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+ <section id="article-list-wrap" class="section-1 con-min-width">
       <div class="con">
-        환영합니다 K_BLOG 입니다. 
-        <br>
-        <br>
-        <br>        
-        
-        
-        
-        
+       <div class="article-search">
+          <form class="block">
+            <input @input="searchKeywordInputed" type="text" placeholder="검색어" :value="searchKeyword">
+          </form>
         </div>
-    </section></main>
+      
+        <div class="article-list">
+          <header>
+            <div>
+              <div class="article-list__cell-id">번호</div>
+              <div class="article-list__cell-reg-date">날짜</div>
+              <div class="article-list__cell-writer">작성자</div>
+              <div class="article-list__cell-title">제목</div>
+            </div>
+          </header>
+          <div class="main">
+            <div v-for="article in filtered">
+              <div class="article-list__cell-id">{{article.id}}</div>
+              <div class="article-list__cell-reg-date">{{article.regDate}}</div>
+              <div class="article-list__cell-writer">{{article.writer}}</div>
+              <div class="article-list__cell-title">
+                <a :href="'article_' + article.id + '.html'" target="_blank" class="hover-underline">{{article.title}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+ <script src="article_search.js"></script></main>
 
   <footer class="bottom-bar con-min-width">
     <div class="con flex flex-ai-c">
