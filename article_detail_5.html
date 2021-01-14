@@ -57,7 +57,7 @@
 <!-- 메타태그정보 //-->
 <!-- META -->
 <link rel="canonical" href="https://ssg.gyubeom.com" />
-<meta name="subject" content="공지사항"/>
+<meta name="subject" content="2강. JAVA / 변수"/>
 <meta name="title" content="K_BLOG" />
 <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
 <meta name="copyright" content="K_BLOG" />
@@ -66,11 +66,66 @@
 <!-- OPENGRAPH -->
 <meta property="og:site_name" content="K_BLOG" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="공지사항" />
-<meta property="og:description" content=" 공지사항
- 개발자 블로그
+<meta property="og:title" content="2강. JAVA / 변수" />
+<meta property="og:description" content=" 변수란
 
-환영합니다
+데이터를 저장하기 위해 프로그램에 의해 이름을 할당받은 메모리 공간을 의미한다
+
+
+ 변수의 이름 생성 규칙
+
+1 변수의 이름은 영문자대소문자 숫자 언더바달러로만 구성할 수 있다
+2 변수의 이름은 숫자로 시작할 수 없다
+3 변수의 이름 사이에는 공백을 포함할 수 없다
+4 변수의 이름으로 자바에서 미리 정의된 키워드는 사용할 수 없다
+
+
+ 변수의 종류
+
+1 기본형 변수
+
+ 정수형  byte short int long
+ 실수형  float double
+ 문자형  char
+ 논리형  boolean
+
+2 참조형 변수
+
+참조형 변수는 8개의 기본형 변수를 사용하여 사용자가 직접 만들어 사용하는 변수를 의미한다
+
+
+ 변수의 선언
+
+1 변수의 선언만 하는 방법
+
+ 문법  타입 변수이름
+
+int num  변수의 선언
+Systemoutprintlnnum  오류 발생
+num  20
+Systemoutprintlnnum  20
+
+2 변수의 선언과 동시에 초기화
+
+ 문법  
+1 타입 변수이름변수이름
+2 타입 변수이름  초깃값변수이름  초깃값
+
+int num1 num2  같은 타입의 변수를 동시에 선언
+double num3  314  선언과 동시에 초기화
+double num4  123 num5  456  같은 타입의 변수를 동시에 선언하면서 초기화
+
+
+
+
+ 잘못된 예 
+
+double num1 num2  같은 타입의 변수를 동시에 선언
+num1  123 num2  456  이미 선언된 여러 변수를 동시에 초기화할 수는 없다
+
+
+
+
 " />
 <meta property="og:locale" content="ko_KR" />
 <meta property="og:image" content="/img/logo/logo_opengraph.png" />
@@ -82,22 +137,132 @@
 <meta property="og:url" content="https://ssg.gyubeom.com" />
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="공지사항" />
+<meta name="twitter:title" content="2강. JAVA / 변수" />
 <meta name="twitter:site" content="@K_BLOG" />
 <meta name="twitter:creator" content="@K_BLOG" />
 <meta name="twitter:image" content="/img/logo/logo_opengraph.png">
-<meta name="twitter:description" content=" 공지사항
- 개발자 블로그
+<meta name="twitter:description" content=" 변수란
 
-환영합니다
+데이터를 저장하기 위해 프로그램에 의해 이름을 할당받은 메모리 공간을 의미한다
+
+
+ 변수의 이름 생성 규칙
+
+1 변수의 이름은 영문자대소문자 숫자 언더바달러로만 구성할 수 있다
+2 변수의 이름은 숫자로 시작할 수 없다
+3 변수의 이름 사이에는 공백을 포함할 수 없다
+4 변수의 이름으로 자바에서 미리 정의된 키워드는 사용할 수 없다
+
+
+ 변수의 종류
+
+1 기본형 변수
+
+ 정수형  byte short int long
+ 실수형  float double
+ 문자형  char
+ 논리형  boolean
+
+2 참조형 변수
+
+참조형 변수는 8개의 기본형 변수를 사용하여 사용자가 직접 만들어 사용하는 변수를 의미한다
+
+
+ 변수의 선언
+
+1 변수의 선언만 하는 방법
+
+ 문법  타입 변수이름
+
+int num  변수의 선언
+Systemoutprintlnnum  오류 발생
+num  20
+Systemoutprintlnnum  20
+
+2 변수의 선언과 동시에 초기화
+
+ 문법  
+1 타입 변수이름변수이름
+2 타입 변수이름  초깃값변수이름  초깃값
+
+int num1 num2  같은 타입의 변수를 동시에 선언
+double num3  314  선언과 동시에 초기화
+double num4  123 num5  456  같은 타입의 변수를 동시에 선언하면서 초기화
+
+
+
+
+ 잘못된 예 
+
+double num1 num2  같은 타입의 변수를 동시에 선언
+num1  123 num2  456  이미 선언된 여러 변수를 동시에 초기화할 수는 없다
+
+
+
+
 " />
 <!-- GOOGLE+ -->
 <meta itemprop="headline" content="K_BLOG" />
 <meta itemprop="name" content="K_BLOG" />
-<meta itemprop="description" content=" 공지사항
- 개발자 블로그
+<meta itemprop="description" content=" 변수란
 
-환영합니다
+데이터를 저장하기 위해 프로그램에 의해 이름을 할당받은 메모리 공간을 의미한다
+
+
+ 변수의 이름 생성 규칙
+
+1 변수의 이름은 영문자대소문자 숫자 언더바달러로만 구성할 수 있다
+2 변수의 이름은 숫자로 시작할 수 없다
+3 변수의 이름 사이에는 공백을 포함할 수 없다
+4 변수의 이름으로 자바에서 미리 정의된 키워드는 사용할 수 없다
+
+
+ 변수의 종류
+
+1 기본형 변수
+
+ 정수형  byte short int long
+ 실수형  float double
+ 문자형  char
+ 논리형  boolean
+
+2 참조형 변수
+
+참조형 변수는 8개의 기본형 변수를 사용하여 사용자가 직접 만들어 사용하는 변수를 의미한다
+
+
+ 변수의 선언
+
+1 변수의 선언만 하는 방법
+
+ 문법  타입 변수이름
+
+int num  변수의 선언
+Systemoutprintlnnum  오류 발생
+num  20
+Systemoutprintlnnum  20
+
+2 변수의 선언과 동시에 초기화
+
+ 문법  
+1 타입 변수이름변수이름
+2 타입 변수이름  초깃값변수이름  초깃값
+
+int num1 num2  같은 타입의 변수를 동시에 선언
+double num3  314  선언과 동시에 초기화
+double num4  123 num5  456  같은 타입의 변수를 동시에 선언하면서 초기화
+
+
+
+
+ 잘못된 예 
+
+double num1 num2  같은 타입의 변수를 동시에 선언
+num1  123 num2  456  이미 선언된 여러 변수를 동시에 초기화할 수는 없다
+
+
+
+
 " />
 <meta itemprop="image" content="/img/logo/logo_opengraph.png" />
 
@@ -106,7 +271,7 @@
 
 
 
-<title>공지사항 K_BLOG | ARTICLE DETAIL</title>
+<title>2강. JAVA / 변수 K_BLOG | ARTICLE DETAIL</title>
 <!-- 폰트어썸 불러오기 -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -239,13 +404,13 @@
  	<div class="article-detail">
           
           <h2 class="article-detail__title">
-            공지사항
+            2강. JAVA / 변수
           </h2>
 
           <div class="article-detail__sub-info flex">
-            <div class="article-detail__board-name">공지사항</div>
+            <div class="article-detail__board-name">JAVA</div>
             <div class="article-detail__reg-date">
-              2021-01-04 04:31:20
+              2021-01-06 15:51:01
             </div>
             <div class="article-detail__writer">
               김규범
@@ -253,19 +418,74 @@
           </div>
           
           <div class="article-detail__body main-font">
-              # 공지사항
-- 개발자 블로그
+              # 변수란
 ```
-환영합니다
+데이터를 저장하기 위해 프로그램에 의해 이름을 할당받은 메모리 공간을 의미한다.
 ```
+
+# 변수의 이름 생성 규칙
+```
+1. 변수의 이름은 영문자(대소문자), 숫자, 언더바(_),달러($)로만 구성할 수 있다.
+2. 변수의 이름은 숫자로 시작할 수 없다.
+3. 변수의 이름 사이에는 공백을 포함할 수 없다.
+4. 변수의 이름으로 자바에서 미리 정의된 키워드는 사용할 수 없다
+```
+
+# 변수의 종류
+```
+1. 기본형 변수
+
+- 정수형 : byte, short, int, long
+- 실수형 : float, double
+- 문자형 : char
+- 논리형 : boolean
+
+2. 참조형 변수
+
+참조형 변수는 8개의 기본형 변수를 사용하여 사용자가 직접 만들어 사용하는 변수를 의미한다
+```
+
+# 변수의 선언
+```
+1. 변수의 선언만 하는 방법
+
+- 문법 : 타입 변수이름;
+
+int num; // 변수의 선언
+System.out.println(num); // 오류 발생
+num = 20;
+System.out.println(num); // 20
+
+2. 변수의 선언과 동시에 초기화
+
+- 문법 : 
+1. 타입 변수이름[변수이름];
+2. 타입 변수이름 = 초깃값[변수이름 = 초깃값];
+
+int num1, num2; // 같은 타입의 변수를 동시에 선언
+double num3 = 3.14; // 선언과 동시에 초기화
+double num4 = 1.23, num5 = 4.56 // 같은 타입의 변수를 동시에 선언하면서 초기화
+```
+
+
+
+# 잘못된 예 
+```
+double num1, num2; // 같은 타입의 변수를 동시에 선언
+num1 = 1.23, num2 = 4.56; // 이미 선언된 여러 변수를 동시에 초기화할 수는 없다.
+```
+
+
+
+
           </div>
           
           <div class="article-detail__reply-box">
           <div id="disqus_thread"></div>
 			<script>
 			 var disqus_config = function() {
-				 this.page.url = 'https://ssg.gyubeom.com/article_detail_1.html';
-				 this.page.idenfifer = 'article_detail_1.html';
+				 this.page.url = 'https://ssg.gyubeom.com/article_detail_5.html';
+				 this.page.idenfifer = 'article_detail_5.html';
 			 };
 			 (function() { // DON'T EDIT BELOW THIS LINE
    			 var d = document, s = d.createElement('script');
@@ -280,9 +500,9 @@
           </div>
           
           <div class="article-detail__menu flex">
-            <a  title="" href="article_detail_0.html" class="hover-underline none">&lt; 이전글</a>
-            <a href="article_list_notice_1.html" class="hover-underline ">목록</a>
-            <a title="" href="article_detail_0.html" class="hover-underline none">다음글 &gt;</a>
+            <a  title="1강. JAVA란?" href="article_detail_4.html" class="hover-underline ">&lt; 이전글</a>
+            <a href="article_list_it_1.html" class="hover-underline ">목록</a>
+            <a title="3강. JAVA / 상수" href="article_detail_6.html" class="hover-underline ">다음글 &gt;</a>
           </div>
         </div>
         </div>
