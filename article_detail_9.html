@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script data-ad-client="ca-pub-1244445326880986" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KED6T5WE07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KED6T5WE07');
+  
+  
+  function go_top(orix,oriy,desx,desy) {
+	    var Timer;
+	    if (document.body.scrollTop == 0) {
+	        var winHeight = document.documentElement.scrollTop;
+	    } else {
+	        var winHeight = document.body.scrollTop;
+	    }
+	    if(Timer) clearTimeout(Timer);
+	    startx = 0;
+	    starty = winHeight;
+	    if(!orix || orix < 0) orix = 0;
+	    if(!oriy || oriy < 0) oriy = 0;
+	    var speed = 7;
+	    if(!desx) desx = 0 + startx;
+	    if(!desy) desy = 0 + starty;
+	    desx += (orix - startx) / speed;
+	    if (desx < 0) desx = 0;
+	    desy += (oriy - starty) / speed;
+	    if (desy < 0) desy = 0;
+	    var posX = Math.ceil(desx);
+	    var posY = Math.ceil(desy);
+	    window.scrollTo(posX, posY);
+	    if((Math.floor(Math.abs(startx - orix)) < 1) && (Math.floor(Math.abs(starty - oriy)) < 1)){
+	        clearTimeout(Timer);
+	        window.scroll(orix,oriy);
+	    }else if(posX != orix || posY != oriy){
+	        Timer = setTimeout("go_top("+orix+","+oriy+","+desx+","+desy+")",15);
+	    }else{
+	        clearTimeout(Timer);
+	    }
+	}
+  
+  
+  
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=1200">
+<meta name="apple-mobile-web-app-title" content="K_BLOG" />
+<!-- 메타태그정보 //-->
+<!-- META -->
+<link rel="canonical" href="https://ssg.gyubeom.com" />
+<meta name="subject" content="6강. JAVA / 조건문"/>
+<meta name="title" content="K_BLOG" />
+<meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
+<meta name="copyright" content="K_BLOG" />
+<meta name="pubdate" content="2021-01-21T08:03:14" />
+<meta name="lastmod" content="2021-01-21T08:03:14" />
+<!-- OPENGRAPH -->
+<meta property="og:site_name" content="K_BLOG" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="6강. JAVA / 조건문" />
+<meta property="og:description" content=" 제어문 
+
+자바 프로그램이 원하는 결과를 얻기 위해서는 프로그램의 순차적인 흐름을 제어해야만 할 경우가 생깁니다
+이때 사용하는 명령문을 제어문이라고 하며 이러한 제어문에는 조건문 반복문 등이 있습니다
+
+
+ 조건문
+
+조건문은 주어진 조건식의 결과에 따라 별도의 명령을 수행하도록 제어하는 명령문입니다
+조건문 중에서도 가장 기본이 되는 명령문은 바로 if 문입니다
+
+ 조건문 종류
+1 if 문
+2 if  else 문
+3 if  else if  else 문
+4 switch 문
+
+
+ 1 if 문
+
+if 문은 조건식의 결과가 참true이면 주어진 명령문을 실행하며 거짓false이면 아무것도 실행하지 않습니다
+
+ 문법
+if 조건식 
+ 조건식의 결과가 참일 때 실행하고자 하는 명령문
+
+
+
+ 2 if  else 문
+
+if 문과 함께 사용하는 else 문은 if 문과는 반대로 주어진 조건식의 결과가 거짓false이면 주어진 명령문을 실행합니다
+
+ 문법
+if 조건식 
+ 조건식의 결과가 참일 때 실행하고자 하는 명령문
+ else 
+ 조건식의 결과가 거짓일 때 실행하고자 하는 명령문
+
+
+
+ 3 if  else if  else 문
+
+if  else if  else 문은 마치 새로운 구문처럼 보이지만 사실은 두 개의 if  else 문이 연달아 나온 것뿐입니다
+이러한 if  else if  else 문은 조건식을 여러 개 명시할 수 있으므로 중첩된 if 문을 좀 더 간결하게 표현할 수 있습니다
+
+ 문법
+if 조건식1 
+ 조건식1의 결과가 참일 때 실행하고자 하는 명령문
+ else if 조건식2 
+ 조건식2의 결과가 참일 때 실행하고자 하는 명령문
+ else 
+ 조건식1의 결과도 거짓이고 조건식2의 결과도 거짓일 때 실행하고자 하는 명령문
+
+
+
+ 4 삼항 연산자에 의한 조건문
+
+자바에서는 간단한 if  else 문은 삼항 연산자를 이용하여 간결하게 표현할 수 있습니다
+
+ 문법
+조건식  반환값1  반환값2
+
+
+ 5 switch 문
+
+switch 문은 if  else 문과 마찬가지로 주어진 조건 값의 결과에 따라 프로그램이 다른 명령을 수행하도록 하는 조건문입니다
+이러한 switch 문은 if  else 문보다 가독성이 더 좋으며 컴파일러가 최적화를 쉽게 할 수 있어 속도 또한 빠른 편입니다
+
+ 문법
+switch 조건 값 
+ case 값1
+ 조건 값이 값1일 때 실행하고자 하는 명령문
+ break
+ case 값2
+ 조건 값이 값2일 때 실행하고자 하는 명령문
+ break
+ 
+ default
+ 조건 값이 어떠한 case 절에도 해당하지 않을 때 실행하고자 하는 명령문
+ break
+
+
+
+" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:image" content="/img/logo/logo_opengraph.png" />
+<meta property="og:image:alt" content="ssg.gyubeom.com" />
+<meta property="og:image:width" content="486" />
+<meta property="og:image:height" content="254" />
+<meta property="og:updated_time" content="2021-01-21T08:03:14"/>
+<meta property="og:pubdate" content="2021-01-21T08:03:14" />
+<meta property="og:url" content="https://ssg.gyubeom.com" />
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="6강. JAVA / 조건문" />
+<meta name="twitter:site" content="@K_BLOG" />
+<meta name="twitter:creator" content="@K_BLOG" />
+<meta name="twitter:image" content="/img/logo/logo_opengraph.png">
+<meta name="twitter:description" content=" 제어문 
+
+자바 프로그램이 원하는 결과를 얻기 위해서는 프로그램의 순차적인 흐름을 제어해야만 할 경우가 생깁니다
+이때 사용하는 명령문을 제어문이라고 하며 이러한 제어문에는 조건문 반복문 등이 있습니다
+
+
+ 조건문
+
+조건문은 주어진 조건식의 결과에 따라 별도의 명령을 수행하도록 제어하는 명령문입니다
+조건문 중에서도 가장 기본이 되는 명령문은 바로 if 문입니다
+
+ 조건문 종류
+1 if 문
+2 if  else 문
+3 if  else if  else 문
+4 switch 문
+
+
+ 1 if 문
+
+if 문은 조건식의 결과가 참true이면 주어진 명령문을 실행하며 거짓false이면 아무것도 실행하지 않습니다
+
+ 문법
+if 조건식 
+ 조건식의 결과가 참일 때 실행하고자 하는 명령문
+
+
+
+ 2 if  else 문
+
+if 문과 함께 사용하는 else 문은 if 문과는 반대로 주어진 조건식의 결과가 거짓false이면 주어진 명령문을 실행합니다
+
+ 문법
+if 조건식 
+ 조건식의 결과가 참일 때 실행하고자 하는 명령문
+ else 
+ 조건식의 결과가 거짓일 때 실행하고자 하는 명령문
+
+
+
+ 3 if  else if  else 문
+
+if  else if  else 문은 마치 새로운 구문처럼 보이지만 사실은 두 개의 if  else 문이 연달아 나온 것뿐입니다
+이러한 if  else if  else 문은 조건식을 여러 개 명시할 수 있으므로 중첩된 if 문을 좀 더 간결하게 표현할 수 있습니다
+
+ 문법
+if 조건식1 
+ 조건식1의 결과가 참일 때 실행하고자 하는 명령문
+ else if 조건식2 
+ 조건식2의 결과가 참일 때 실행하고자 하는 명령문
+ else 
+ 조건식1의 결과도 거짓이고 조건식2의 결과도 거짓일 때 실행하고자 하는 명령문
+
+
+
+ 4 삼항 연산자에 의한 조건문
+
+자바에서는 간단한 if  else 문은 삼항 연산자를 이용하여 간결하게 표현할 수 있습니다
+
+ 문법
+조건식  반환값1  반환값2
+
+
+ 5 switch 문
+
+switch 문은 if  else 문과 마찬가지로 주어진 조건 값의 결과에 따라 프로그램이 다른 명령을 수행하도록 하는 조건문입니다
+이러한 switch 문은 if  else 문보다 가독성이 더 좋으며 컴파일러가 최적화를 쉽게 할 수 있어 속도 또한 빠른 편입니다
+
+ 문법
+switch 조건 값 
+ case 값1
+ 조건 값이 값1일 때 실행하고자 하는 명령문
+ break
+ case 값2
+ 조건 값이 값2일 때 실행하고자 하는 명령문
+ break
+ 
+ default
+ 조건 값이 어떠한 case 절에도 해당하지 않을 때 실행하고자 하는 명령문
+ break
+
+
+
+" />
+<!-- GOOGLE+ -->
+<meta itemprop="headline" content="K_BLOG" />
+<meta itemprop="name" content="K_BLOG" />
+<meta itemprop="description" content=" 제어문 
+
+자바 프로그램이 원하는 결과를 얻기 위해서는 프로그램의 순차적인 흐름을 제어해야만 할 경우가 생깁니다
+이때 사용하는 명령문을 제어문이라고 하며 이러한 제어문에는 조건문 반복문 등이 있습니다
+
+
+ 조건문
+
+조건문은 주어진 조건식의 결과에 따라 별도의 명령을 수행하도록 제어하는 명령문입니다
+조건문 중에서도 가장 기본이 되는 명령문은 바로 if 문입니다
+
+ 조건문 종류
+1 if 문
+2 if  else 문
+3 if  else if  else 문
+4 switch 문
+
+
+ 1 if 문
+
+if 문은 조건식의 결과가 참true이면 주어진 명령문을 실행하며 거짓false이면 아무것도 실행하지 않습니다
+
+ 문법
+if 조건식 
+ 조건식의 결과가 참일 때 실행하고자 하는 명령문
+
+
+
+ 2 if  else 문
+
+if 문과 함께 사용하는 else 문은 if 문과는 반대로 주어진 조건식의 결과가 거짓false이면 주어진 명령문을 실행합니다
+
+ 문법
+if 조건식 
+ 조건식의 결과가 참일 때 실행하고자 하는 명령문
+ else 
+ 조건식의 결과가 거짓일 때 실행하고자 하는 명령문
+
+
+
+ 3 if  else if  else 문
+
+if  else if  else 문은 마치 새로운 구문처럼 보이지만 사실은 두 개의 if  else 문이 연달아 나온 것뿐입니다
+이러한 if  else if  else 문은 조건식을 여러 개 명시할 수 있으므로 중첩된 if 문을 좀 더 간결하게 표현할 수 있습니다
+
+ 문법
+if 조건식1 
+ 조건식1의 결과가 참일 때 실행하고자 하는 명령문
+ else if 조건식2 
+ 조건식2의 결과가 참일 때 실행하고자 하는 명령문
+ else 
+ 조건식1의 결과도 거짓이고 조건식2의 결과도 거짓일 때 실행하고자 하는 명령문
+
+
+
+ 4 삼항 연산자에 의한 조건문
+
+자바에서는 간단한 if  else 문은 삼항 연산자를 이용하여 간결하게 표현할 수 있습니다
+
+ 문법
+조건식  반환값1  반환값2
+
+
+ 5 switch 문
+
+switch 문은 if  else 문과 마찬가지로 주어진 조건 값의 결과에 따라 프로그램이 다른 명령을 수행하도록 하는 조건문입니다
+이러한 switch 문은 if  else 문보다 가독성이 더 좋으며 컴파일러가 최적화를 쉽게 할 수 있어 속도 또한 빠른 편입니다
+
+ 문법
+switch 조건 값 
+ case 값1
+ 조건 값이 값1일 때 실행하고자 하는 명령문
+ break
+ case 값2
+ 조건 값이 값2일 때 실행하고자 하는 명령문
+ break
+ 
+ default
+ 조건 값이 어떠한 case 절에도 해당하지 않을 때 실행하고자 하는 명령문
+ break
+
+
+
+" />
+<meta itemprop="image" content="/img/logo/logo_opengraph.png" />
+
+
+
+
+
+
+<title>6강. JAVA / 조건문 K_BLOG | ARTICLE DETAIL</title>
+<!-- 폰트어썸 불러오기 -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" href="app.css" />
+<meta name="google-site-verification" content="ye8CRSlmj5WU2naTTtvSjYyHxTE2N3Ke1RiA6cSc1hs" />
+
+<link rel="icon" href="favicon.ico"/>
+
+<!-- 제이쿼리 불러오기 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<div class="body-content min-height-100vh flex flex-column">
+  <!-- 로고바 시작 -->
+  <header class="logo-bar con-min-width">
+    <div class="con height-100p flex flex-jc-c">
+      <a href="index.html" class="logo flex flex-ai-c">
+        <i class="fas fa-frog"></i>
+        <span>
+           K_<span></span>BLOG
+        </span>
+      </a>
+    </div>
+  </header>
+  <!-- 로고바 끝 -->
+
+  <!-- 메뉴바 시작 -->
+  <header class="menu-bar con-min-width">
+    <div class="con height-100p">
+      <nav class="menu-bar__menu-1">
+        <ul class="flex">
+          <li>
+            <a href="./" class="block">
+              <i class="fas fa-home"></i>
+              <span>HOME</span>
+            </a>
+          </li>
+          <li>
+            <a class="block">
+              <i class="fas fa-list"></i>
+              <span>ARTICLES</span>
+            </a>
+            <ul>
+              	<li><a href="article_list_it_1.html" class="block"><i class="fas fa-clipboard-list"></i> <span> IT 게시판 </span></a></li><li><a href="article_list_free_1.html" class="block"><i class="fab fa-free-code-camp"></i> <span>자유 게시판</span></a></li><li><a href="article_list_notice_1.html" class="block"><i class="fas fa-flag"></i> <span>공지사항 게시판</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="block">
+              <i class="fas fa-link"></i>
+              <span>LINK</span>
+            </a>
+            <ul>
+              <li>
+                <a href="https://to2.kr/bEr" target="_blank" class="block">
+                  <i class="fab fa-blogger-b"></i>
+                  <span>T-Story</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/rbqja5597?tab=repositories" target="_blank" class="block">
+                  <i class="fab fa-github"></i>
+                  <span>GITHUB</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://to2.kr/bCq" target="_blank" class="block">
+                  <i class="fab fa-youtube"></i>
+                  <span>YouTube</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="stat.html" class="block">
+              <i class="fas fa-chart-pie"></i>
+              <span>STATISTICS</span>
+            </a>
+          </li>
+          <li>
+            <a href="./article_search.html" class="block">
+              <i class="fas fa-search"></i>
+              <span>SEARCH</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- 메뉴바 끝 -->
+
+  <main class="flex-grow-1">
+    <section class="title-bar con-min-width">
+      <h1 class="con">
+      		<i class="fas fa-file-alt"></i> <span>게시물 상세</span>
+      </h1>
+    </section>
+
+	
+	
+	
+	
+ 
+
+<!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
+<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+
+<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
+<!-- 토스트 UI 에디터, CSS 코어 -->
+<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+ 
+ <!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
+<script src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight.min.js"></script>
+ 
+
+ 
+ <section class="section-1 con-min-width">
+ 
+ <div class="con">
+ 	
+ 	<div class="article-detail">
+          
+          <h2 class="article-detail__title">
+            6강. JAVA / 조건문
+          </h2>
+
+          <div class="article-detail__sub-info flex">
+            <div class="article-detail__board-name">JAVA</div>
+            <div class="article-detail__reg-date">
+              2021-01-20 17:04:05
+            </div>
+            <div class="article-detail__writer">
+              김규범
+            </div>
+          </div>
+          
+          <div class="article-detail__body main-font">
+              # 제어문 
+```
+자바 프로그램이 원하는 결과를 얻기 위해서는 프로그램의 순차적인 흐름을 제어해야만 할 경우가 생깁니다.
+이때 사용하는 명령문을 제어문이라고 하며, 이러한 제어문에는 조건문, 반복문 등이 있습니다.
+```
+
+# 조건문
+```
+조건문은 주어진 조건식의 결과에 따라 별도의 명령을 수행하도록 제어하는 명령문입니다.
+조건문 중에서도 가장 기본이 되는 명령문은 바로 if 문입니다.
+
+- 조건문 종류
+1. if 문
+2. if / else 문
+3. if / else if / else 문
+4. switch 문
+```
+
+# 1. if 문
+```
+if 문은 조건식의 결과가 참(true)이면 주어진 명령문을 실행하며, 거짓(false)이면 아무것도 실행하지 않습니다.
+
+- 문법
+if (조건식) {
+ 조건식의 결과가 참일 때 실행하고자 하는 명령문;
+}
+```
+
+# 2. if / else 문
+```
+if 문과 함께 사용하는 else 문은 if 문과는 반대로 주어진 조건식의 결과가 거짓(false)이면 주어진 명령문을 실행합니다.
+
+- 문법
+if (조건식) {
+ 조건식의 결과가 참일 때 실행하고자 하는 명령문;
+} else {
+ 조건식의 결과가 거짓일 때 실행하고자 하는 명령문;
+}
+```
+
+# 3. if / else if / else 문
+```
+if / else if / else 문은 마치 새로운 구문처럼 보이지만, 사실은 두 개의 if / else 문이 연달아 나온 것뿐입니다.
+이러한 if / else if / else 문은 조건식을 여러 개 명시할 수 있으므로 중첩된 if 문을 좀 더 간결하게 표현할 수 있습니다.
+
+- 문법
+if (조건식1) {
+ 조건식1의 결과가 참일 때 실행하고자 하는 명령문;
+} else if (조건식2) {
+ 조건식2의 결과가 참일 때 실행하고자 하는 명령문;
+} else {
+ 조건식1의 결과도 거짓이고, 조건식2의 결과도 거짓일 때 실행하고자 하는 명령문;
+}
+```
+
+# 4. 삼항 연산자에 의한 조건문
+```
+자바에서는 간단한 if / else 문은 삼항 연산자를 이용하여 간결하게 표현할 수 있습니다.
+
+- 문법
+조건식 ? 반환값1 : 반환값2
+```
+
+# 5. switch 문
+```
+switch 문은 if / else 문과 마찬가지로 주어진 조건 값의 결과에 따라 프로그램이 다른 명령을 수행하도록 하는 조건문입니다.
+이러한 switch 문은 if / else 문보다 가독성이 더 좋으며, 컴파일러가 최적화를 쉽게 할 수 있어 속도 또한 빠른 편입니다.
+
+- 문법
+switch (조건 값) {
+ case 값1:
+ 조건 값이 값1일 때 실행하고자 하는 명령문;
+ break;
+ case 값2:
+ 조건 값이 값2일 때 실행하고자 하는 명령문;
+ break;
+ ...
+ default:
+ 조건 값이 어떠한 case 절에도 해당하지 않을 때 실행하고자 하는 명령문;
+ break;
+}
+```
+
+
+          </div>
+          
+          <div class="article-detail__reply-box">
+          <div id="disqus_thread"></div>
+			<script>
+			 var disqus_config = function() {
+				 this.page.url = 'https://ssg.gyubeom.com/article_detail_9.html';
+				 this.page.idenfifer = 'article_detail_9.html';
+			 };
+			 (function() { // DON'T EDIT BELOW THIS LINE
+   			 var d = document, s = d.createElement('script');
+   			 s.src = 'https://enkung.disqus.com/embed.js';
+   			 s.setAttribute('data-timestamp', +new Date());
+   			 (d.head || d.body).appendChild(s);
+   	 		})();
+			</script>
+			<noscript>Please enable JavaScript to view the 
+			<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+			</noscript>
+          </div>
+          
+          <div class="article-detail__menu flex">
+            <a  title="5강. JAVA / 연산자" href="article_detail_8.html" class="hover-underline ">&lt; 이전글</a>
+            <a href="article_list_it_1.html" class="hover-underline ">목록</a>
+            <a title="" href="article_detail_0.html" class="hover-underline none">다음글 &gt;</a>
+          </div>
+        </div>
+        </div>
+      </section>
+
+</main>
+
+  <footer class="bottom-bar con-min-width">
+    <div class="con flex flex-ai-c">
+      <a href="#" class="logo logo--mini flex flex-ai-c">
+        <i class="fas fa-frog"></i>
+        <span>
+          K_<span></span>BLOG
+        </span>
+      </a>
+
+      <div class="bottom-bar__site-info">    
+      <i class="far fa-envelope"></i>
+      rbqja5597@naver.com
+      <br><br>
+      <i class="far fa-copyright"></i>
+        Copyright K_BLOG. All rights reserved.
+        
+        
+        
+        <span onclick="go_top();">
+        <i class="go-top">
+        <i class="fas fa-angle-up icons"></i>
+        </i>
+        </span>
+        
+        
+      </div>
+      
+
+    </div>
+    
+    
+  </footer>
+</div>
+<script src="app.js"></script>
+
+</body>
+</html>

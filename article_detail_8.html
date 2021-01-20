@@ -57,7 +57,7 @@
 <!-- 메타태그정보 //-->
 <!-- META -->
 <link rel="canonical" href="https://ssg.gyubeom.com" />
-<meta name="subject" content="초보 개발자 일상 블로그"/>
+<meta name="subject" content="5강. JAVA / 연산자"/>
 <meta name="title" content="K_BLOG" />
 <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
 <meta name="copyright" content="K_BLOG" />
@@ -66,8 +66,23 @@
 <!-- OPENGRAPH -->
 <meta property="og:site_name" content="K_BLOG" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="초보 개발자 일상 블로그" />
-<meta property="og:description" content="일상 관련 글들을 공유합니다." />
+<meta property="og:title" content="5강. JAVA / 연산자" />
+<meta property="og:description" content=" 산술 연산자 
+
+
+산술 연산자는 사칙연산을 다루는 연산자로 가장 기본적이면서도 가장 많이 사용되는 연산자 중 하나입니다
+산술 연산자는 모두 두 개의 피연산자를 가지는 이항 연산자이며 피연산자들의 결합 방향은 왼쪽에서 오른쪽입니다
+
+
+ 산술연산
+
+  왼쪽의 피연산자에 오른쪽의 피연산자를 더함
+  왼쪽의 피연산자에서 오른쪽의 피연산자를 뺌
+  왼쪽의 피연산자에 오른쪽의 피연산자를 곱함
+  왼쪽의 피연산자를 오른쪽의 피연산자로 나눔
+  왼쪽의 피연산자를 오른쪽의 피연산자로 나눈 후 그 나머지를 반환함
+
+" />
 <meta property="og:locale" content="ko_KR" />
 <meta property="og:image" content="/img/logo/logo_opengraph.png" />
 <meta property="og:image:alt" content="ssg.gyubeom.com" />
@@ -78,15 +93,45 @@
 <meta property="og:url" content="https://ssg.gyubeom.com" />
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="초보 개발자 일상 블로그" />
+<meta name="twitter:title" content="5강. JAVA / 연산자" />
 <meta name="twitter:site" content="@K_BLOG" />
 <meta name="twitter:creator" content="@K_BLOG" />
 <meta name="twitter:image" content="/img/logo/logo_opengraph.png">
-<meta name="twitter:description" content="일상 관련 글들을 공유합니다." />
+<meta name="twitter:description" content=" 산술 연산자 
+
+
+산술 연산자는 사칙연산을 다루는 연산자로 가장 기본적이면서도 가장 많이 사용되는 연산자 중 하나입니다
+산술 연산자는 모두 두 개의 피연산자를 가지는 이항 연산자이며 피연산자들의 결합 방향은 왼쪽에서 오른쪽입니다
+
+
+ 산술연산
+
+  왼쪽의 피연산자에 오른쪽의 피연산자를 더함
+  왼쪽의 피연산자에서 오른쪽의 피연산자를 뺌
+  왼쪽의 피연산자에 오른쪽의 피연산자를 곱함
+  왼쪽의 피연산자를 오른쪽의 피연산자로 나눔
+  왼쪽의 피연산자를 오른쪽의 피연산자로 나눈 후 그 나머지를 반환함
+
+" />
 <!-- GOOGLE+ -->
 <meta itemprop="headline" content="K_BLOG" />
 <meta itemprop="name" content="K_BLOG" />
-<meta itemprop="description" content="일상 관련 글들을 공유합니다." />
+<meta itemprop="description" content=" 산술 연산자 
+
+
+산술 연산자는 사칙연산을 다루는 연산자로 가장 기본적이면서도 가장 많이 사용되는 연산자 중 하나입니다
+산술 연산자는 모두 두 개의 피연산자를 가지는 이항 연산자이며 피연산자들의 결합 방향은 왼쪽에서 오른쪽입니다
+
+
+ 산술연산
+
+  왼쪽의 피연산자에 오른쪽의 피연산자를 더함
+  왼쪽의 피연산자에서 오른쪽의 피연산자를 뺌
+  왼쪽의 피연산자에 오른쪽의 피연산자를 곱함
+  왼쪽의 피연산자를 오른쪽의 피연산자로 나눔
+  왼쪽의 피연산자를 오른쪽의 피연산자로 나눈 후 그 나머지를 반환함
+
+" />
 <meta itemprop="image" content="/img/logo/logo_opengraph.png" />
 
 
@@ -94,7 +139,7 @@
 
 
 
-<title> K_BLOG | HOME</title>
+<title>5강. JAVA / 연산자 K_BLOG | ARTICLE DETAIL</title>
 <!-- 폰트어썸 불러오기 -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -189,7 +234,7 @@
   <main class="flex-grow-1">
     <section class="title-bar con-min-width">
       <h1 class="con">
-      		<i class="fas fa-home"></i> <span>HOME</span>
+      		<i class="fas fa-file-alt"></i> <span>게시물 상세</span>
       </h1>
     </section>
 
@@ -199,18 +244,95 @@
 	
  
 
+<!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
+<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+
+<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
+<!-- 토스트 UI 에디터, CSS 코어 -->
+<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+ 
+ <!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
+<script src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight.min.js"></script>
+ 
+
+ 
  <section class="section-1 con-min-width">
-      <div class="con">
-        환영합니다 K_BLOG 입니다. 
-        <br>
-        <br>
-        <br>        
-        
-        
-        
-        
+ 
+ <div class="con">
+ 	
+ 	<div class="article-detail">
+          
+          <h2 class="article-detail__title">
+            5강. JAVA / 연산자
+          </h2>
+
+          <div class="article-detail__sub-info flex">
+            <div class="article-detail__board-name">JAVA</div>
+            <div class="article-detail__reg-date">
+              2021-01-18 15:33:40
+            </div>
+            <div class="article-detail__writer">
+              김규범
+            </div>
+          </div>
+          
+          <div class="article-detail__body main-font">
+              # 산술 연산자 
+
+```
+산술 연산자는 사칙연산을 다루는 연산자로, 가장 기본적이면서도 가장 많이 사용되는 연산자 중 하나입니다.
+산술 연산자는 모두 두 개의 피연산자를 가지는 이항 연산자이며, 피연산자들의 결합 방향은 왼쪽에서 오른쪽입니다.
+```
+
+- 산술연산
+```
++ : 왼쪽의 피연산자에 오른쪽의 피연산자를 더함.
+- : 왼쪽의 피연산자에서 오른쪽의 피연산자를 뺌.
+* : 왼쪽의 피연산자에 오른쪽의 피연산자를 곱함.
+/ : 왼쪽의 피연산자를 오른쪽의 피연산자로 나눔.
+% : 왼쪽의 피연산자를 오른쪽의 피연산자로 나눈 후, 그 나머지를 반환함.
+```
+
+          </div>
+          
+          <div class="article-detail__reply-box">
+          <div id="disqus_thread"></div>
+			<script>
+			 var disqus_config = function() {
+				 this.page.url = 'https://ssg.gyubeom.com/article_detail_8.html';
+				 this.page.idenfifer = 'article_detail_8.html';
+			 };
+			 (function() { // DON'T EDIT BELOW THIS LINE
+   			 var d = document, s = d.createElement('script');
+   			 s.src = 'https://enkung.disqus.com/embed.js';
+   			 s.setAttribute('data-timestamp', +new Date());
+   			 (d.head || d.body).appendChild(s);
+   	 		})();
+			</script>
+			<noscript>Please enable JavaScript to view the 
+			<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+			</noscript>
+          </div>
+          
+          <div class="article-detail__menu flex">
+            <a  title="4강. JAVA / 기본 타입" href="article_detail_7.html" class="hover-underline ">&lt; 이전글</a>
+            <a href="article_list_it_1.html" class="hover-underline ">목록</a>
+            <a title="6강. JAVA / 조건문" href="article_detail_9.html" class="hover-underline ">다음글 &gt;</a>
+          </div>
         </div>
-    </section></main>
+        </div>
+      </section>
+
+</main>
 
   <footer class="bottom-bar con-min-width">
     <div class="con flex flex-ai-c">
