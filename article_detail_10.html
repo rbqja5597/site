@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script data-ad-client="ca-pub-1244445326880986" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KED6T5WE07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KED6T5WE07');
+  
+  
+  function go_top(orix,oriy,desx,desy) {
+	    var Timer;
+	    if (document.body.scrollTop == 0) {
+	        var winHeight = document.documentElement.scrollTop;
+	    } else {
+	        var winHeight = document.body.scrollTop;
+	    }
+	    if(Timer) clearTimeout(Timer);
+	    startx = 0;
+	    starty = winHeight;
+	    if(!orix || orix < 0) orix = 0;
+	    if(!oriy || oriy < 0) oriy = 0;
+	    var speed = 7;
+	    if(!desx) desx = 0 + startx;
+	    if(!desy) desy = 0 + starty;
+	    desx += (orix - startx) / speed;
+	    if (desx < 0) desx = 0;
+	    desy += (oriy - starty) / speed;
+	    if (desy < 0) desy = 0;
+	    var posX = Math.ceil(desx);
+	    var posY = Math.ceil(desy);
+	    window.scrollTo(posX, posY);
+	    if((Math.floor(Math.abs(startx - orix)) < 1) && (Math.floor(Math.abs(starty - oriy)) < 1)){
+	        clearTimeout(Timer);
+	        window.scroll(orix,oriy);
+	    }else if(posX != orix || posY != oriy){
+	        Timer = setTimeout("go_top("+orix+","+oriy+","+desx+","+desy+")",15);
+	    }else{
+	        clearTimeout(Timer);
+	    }
+	}
+  
+  
+  
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=1200">
+<meta name="apple-mobile-web-app-title" content="K_BLOG" />
+<!-- 메타태그정보 //-->
+<!-- META -->
+<link rel="canonical" href="https://ssg.gyubeom.com" />
+<meta name="subject" content="7강. JAVA / 반복문"/>
+<meta name="title" content="K_BLOG" />
+<meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
+<meta name="copyright" content="K_BLOG" />
+<meta name="pubdate" content="2021-01-28T02:32:07" />
+<meta name="lastmod" content="2021-01-28T02:32:07" />
+<!-- OPENGRAPH -->
+<meta property="og:site_name" content="K_BLOG" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="7강. JAVA / 반복문" />
+<meta property="og:description" content=" 반복문
+
+반복문이란 프로그램 내에서 똑같은 명령을 일정 횟수만큼 반복하여 수행하도록 제어하는 명령문입니다
+프로그램이 처리하는 대부분의 코드는 반복적인 형태가 많으므로 가장 많이 사용되는 제어문 중 하나입니다
+
+ 반복문의 종류
+1 while
+2 dowhile
+3 for
+4 Enhanced for 
+
+
+ while문
+
+while 문은 특정 조건을 만족할 때까지 계속해서 주어진 명령문을 반복 실행
+while 문은 우선 조건식이 참true인지를 판단하여 참이면 내부의 명령문을 실행한다
+
+ex  while문 5번 반복 실행
+
+int i  0
+
+while i  5 
+
+ Systemoutprintlnwhile 문이   i  1  번째 반복 실행중
+
+ i  이 부분을 삭제하면 무한 루프에 빠지게 된다
+
+
+
+Systemoutprintlni  while 문이 끝나고 난 후의 값
+
+ 결과
+
+while 문이 1번째 반복 실행중입니다
+while 문이 2번째 반복 실행중입니다
+while 문이 3번째 반복 실행중입니다
+while 문이 4번째 반복 실행중입니다
+while 문이 5번째 반복 실행중입니다
+5
+
+
+ dowhile 문
+
+while 문은 루프에 진입하기 전에 먼저 조건식부터 검사합니다
+하지만 do  while 문은 먼저 루프를 한 번 실행한 후에 조건식을 검사합니다
+즉 do  while 문은 조건식의 결과와 상관없이 무조건 한 번은 루프를 실행합니다
+
+ex 
+
+int i  1 j  1
+
+ 
+
+while i  1 
+    Systemoutprintlnwhile 문이   i  번째 반복 실행중입니다
+    i 
+
+
+Systemoutprintlnwhile 문이 종료된 후 변수 i의 값은   i  입니다 
+
+do 
+    Systemoutprintlndo  while 문이   i  번째 반복 실행중입니다
+    j 
+ while j  1
+Systemoutprintlnj 
+
+ 결과 
+
+while 문이 종료된 후 변수 i의 값은 1입니다
+do  while 문이 1번째 반복 실행중입니다
+2
+
+
+ for 문
+
+for 문은 while 문과는 달리 자체적으로 초기식 조건식 증감식을 모두 포함하고 있는 반복문입니다
+따라서 while 문보다는 좀 더 간결하게 반복문을 표현할 수 있습니다
+
+ex 
+
+for i  0 i  5 i 
+ Systemoutprintlnfor문   i  1  번 반복 실행
+
+Systemoutprintlni
+
+
+ 결과 
+
+for 문 1반복 실행
+for 문 2반복 실행
+for 문 3반복 실행
+for 문 4반복 실행
+for 문 5반복 실행
+5
+
+
+ Enhanced for 문
+
+JDK 15부터 Enhanced for 문이라는 반복문이 추가되었습니다
+이 반복문은 컬렉션 프레임워크와 배열에서 유용하게 자주 사용됩니다
+
+ 
+" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:image" content="/img/logo/logo_opengraph.png" />
+<meta property="og:image:alt" content="ssg.gyubeom.com" />
+<meta property="og:image:width" content="486" />
+<meta property="og:image:height" content="254" />
+<meta property="og:updated_time" content="2021-01-28T02:32:07"/>
+<meta property="og:pubdate" content="2021-01-28T02:32:07" />
+<meta property="og:url" content="https://ssg.gyubeom.com" />
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="7강. JAVA / 반복문" />
+<meta name="twitter:site" content="@K_BLOG" />
+<meta name="twitter:creator" content="@K_BLOG" />
+<meta name="twitter:image" content="/img/logo/logo_opengraph.png">
+<meta name="twitter:description" content=" 반복문
+
+반복문이란 프로그램 내에서 똑같은 명령을 일정 횟수만큼 반복하여 수행하도록 제어하는 명령문입니다
+프로그램이 처리하는 대부분의 코드는 반복적인 형태가 많으므로 가장 많이 사용되는 제어문 중 하나입니다
+
+ 반복문의 종류
+1 while
+2 dowhile
+3 for
+4 Enhanced for 
+
+
+ while문
+
+while 문은 특정 조건을 만족할 때까지 계속해서 주어진 명령문을 반복 실행
+while 문은 우선 조건식이 참true인지를 판단하여 참이면 내부의 명령문을 실행한다
+
+ex  while문 5번 반복 실행
+
+int i  0
+
+while i  5 
+
+ Systemoutprintlnwhile 문이   i  1  번째 반복 실행중
+
+ i  이 부분을 삭제하면 무한 루프에 빠지게 된다
+
+
+
+Systemoutprintlni  while 문이 끝나고 난 후의 값
+
+ 결과
+
+while 문이 1번째 반복 실행중입니다
+while 문이 2번째 반복 실행중입니다
+while 문이 3번째 반복 실행중입니다
+while 문이 4번째 반복 실행중입니다
+while 문이 5번째 반복 실행중입니다
+5
+
+
+ dowhile 문
+
+while 문은 루프에 진입하기 전에 먼저 조건식부터 검사합니다
+하지만 do  while 문은 먼저 루프를 한 번 실행한 후에 조건식을 검사합니다
+즉 do  while 문은 조건식의 결과와 상관없이 무조건 한 번은 루프를 실행합니다
+
+ex 
+
+int i  1 j  1
+
+ 
+
+while i  1 
+    Systemoutprintlnwhile 문이   i  번째 반복 실행중입니다
+    i 
+
+
+Systemoutprintlnwhile 문이 종료된 후 변수 i의 값은   i  입니다 
+
+do 
+    Systemoutprintlndo  while 문이   i  번째 반복 실행중입니다
+    j 
+ while j  1
+Systemoutprintlnj 
+
+ 결과 
+
+while 문이 종료된 후 변수 i의 값은 1입니다
+do  while 문이 1번째 반복 실행중입니다
+2
+
+
+ for 문
+
+for 문은 while 문과는 달리 자체적으로 초기식 조건식 증감식을 모두 포함하고 있는 반복문입니다
+따라서 while 문보다는 좀 더 간결하게 반복문을 표현할 수 있습니다
+
+ex 
+
+for i  0 i  5 i 
+ Systemoutprintlnfor문   i  1  번 반복 실행
+
+Systemoutprintlni
+
+
+ 결과 
+
+for 문 1반복 실행
+for 문 2반복 실행
+for 문 3반복 실행
+for 문 4반복 실행
+for 문 5반복 실행
+5
+
+
+ Enhanced for 문
+
+JDK 15부터 Enhanced for 문이라는 반복문이 추가되었습니다
+이 반복문은 컬렉션 프레임워크와 배열에서 유용하게 자주 사용됩니다
+
+ 
+" />
+<!-- GOOGLE+ -->
+<meta itemprop="headline" content="K_BLOG" />
+<meta itemprop="name" content="K_BLOG" />
+<meta itemprop="description" content=" 반복문
+
+반복문이란 프로그램 내에서 똑같은 명령을 일정 횟수만큼 반복하여 수행하도록 제어하는 명령문입니다
+프로그램이 처리하는 대부분의 코드는 반복적인 형태가 많으므로 가장 많이 사용되는 제어문 중 하나입니다
+
+ 반복문의 종류
+1 while
+2 dowhile
+3 for
+4 Enhanced for 
+
+
+ while문
+
+while 문은 특정 조건을 만족할 때까지 계속해서 주어진 명령문을 반복 실행
+while 문은 우선 조건식이 참true인지를 판단하여 참이면 내부의 명령문을 실행한다
+
+ex  while문 5번 반복 실행
+
+int i  0
+
+while i  5 
+
+ Systemoutprintlnwhile 문이   i  1  번째 반복 실행중
+
+ i  이 부분을 삭제하면 무한 루프에 빠지게 된다
+
+
+
+Systemoutprintlni  while 문이 끝나고 난 후의 값
+
+ 결과
+
+while 문이 1번째 반복 실행중입니다
+while 문이 2번째 반복 실행중입니다
+while 문이 3번째 반복 실행중입니다
+while 문이 4번째 반복 실행중입니다
+while 문이 5번째 반복 실행중입니다
+5
+
+
+ dowhile 문
+
+while 문은 루프에 진입하기 전에 먼저 조건식부터 검사합니다
+하지만 do  while 문은 먼저 루프를 한 번 실행한 후에 조건식을 검사합니다
+즉 do  while 문은 조건식의 결과와 상관없이 무조건 한 번은 루프를 실행합니다
+
+ex 
+
+int i  1 j  1
+
+ 
+
+while i  1 
+    Systemoutprintlnwhile 문이   i  번째 반복 실행중입니다
+    i 
+
+
+Systemoutprintlnwhile 문이 종료된 후 변수 i의 값은   i  입니다 
+
+do 
+    Systemoutprintlndo  while 문이   i  번째 반복 실행중입니다
+    j 
+ while j  1
+Systemoutprintlnj 
+
+ 결과 
+
+while 문이 종료된 후 변수 i의 값은 1입니다
+do  while 문이 1번째 반복 실행중입니다
+2
+
+
+ for 문
+
+for 문은 while 문과는 달리 자체적으로 초기식 조건식 증감식을 모두 포함하고 있는 반복문입니다
+따라서 while 문보다는 좀 더 간결하게 반복문을 표현할 수 있습니다
+
+ex 
+
+for i  0 i  5 i 
+ Systemoutprintlnfor문   i  1  번 반복 실행
+
+Systemoutprintlni
+
+
+ 결과 
+
+for 문 1반복 실행
+for 문 2반복 실행
+for 문 3반복 실행
+for 문 4반복 실행
+for 문 5반복 실행
+5
+
+
+ Enhanced for 문
+
+JDK 15부터 Enhanced for 문이라는 반복문이 추가되었습니다
+이 반복문은 컬렉션 프레임워크와 배열에서 유용하게 자주 사용됩니다
+
+ 
+" />
+<meta itemprop="image" content="/img/logo/logo_opengraph.png" />
+
+
+
+
+
+
+<title>7강. JAVA / 반복문 K_BLOG | ARTICLE DETAIL</title>
+<!-- 폰트어썸 불러오기 -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" href="app.css" />
+<meta name="google-site-verification" content="ye8CRSlmj5WU2naTTtvSjYyHxTE2N3Ke1RiA6cSc1hs" />
+
+<link rel="icon" href="favicon.ico"/>
+
+<!-- 제이쿼리 불러오기 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<div class="body-content min-height-100vh flex flex-column">
+  <!-- 로고바 시작 -->
+  <header class="logo-bar con-min-width">
+    <div class="con height-100p flex flex-jc-c">
+      <a href="index.html" class="logo flex flex-ai-c">
+        <i class="fas fa-frog"></i>
+        <span>
+           K_<span></span>BLOG
+        </span>
+      </a>
+    </div>
+  </header>
+  <!-- 로고바 끝 -->
+
+  <!-- 메뉴바 시작 -->
+  <header class="menu-bar con-min-width">
+    <div class="con height-100p">
+      <nav class="menu-bar__menu-1">
+        <ul class="flex">
+          <li>
+            <a href="./" class="block">
+              <i class="fas fa-home"></i>
+              <span>HOME</span>
+            </a>
+          </li>
+          <li>
+            <a class="block">
+              <i class="fas fa-list"></i>
+              <span>ARTICLES</span>
+            </a>
+            <ul>
+              	<li><a href="article_list_it_1.html" class="block"><i class="fas fa-clipboard-list"></i> <span> IT 게시판 </span></a></li><li><a href="article_list_free_1.html" class="block"><i class="fab fa-free-code-camp"></i> <span>자유 게시판</span></a></li><li><a href="article_list_notice_1.html" class="block"><i class="fas fa-flag"></i> <span>공지사항 게시판</span></a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="block">
+              <i class="fas fa-link"></i>
+              <span>LINK</span>
+            </a>
+            <ul>
+              <li>
+                <a href="https://to2.kr/bEr" target="_blank" class="block">
+                  <i class="fab fa-blogger-b"></i>
+                  <span>T-Story</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/rbqja5597?tab=repositories" target="_blank" class="block">
+                  <i class="fab fa-github"></i>
+                  <span>GITHUB</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://to2.kr/bCq" target="_blank" class="block">
+                  <i class="fab fa-youtube"></i>
+                  <span>YouTube</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="stat.html" class="block">
+              <i class="fas fa-chart-pie"></i>
+              <span>STATISTICS</span>
+            </a>
+          </li>
+          <li>
+            <a href="./article_search.html" class="block">
+              <i class="fas fa-search"></i>
+              <span>SEARCH</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- 메뉴바 끝 -->
+
+  <main class="flex-grow-1">
+    <section class="title-bar con-min-width">
+      <h1 class="con">
+      		<i class="fas fa-file-alt"></i> <span>게시물 상세</span>
+      </h1>
+    </section>
+
+	
+	
+	
+	
+ 
+
+<!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
+<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+
+<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
+<!-- 토스트 UI 에디터, CSS 코어 -->
+<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+ 
+ <!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
+<script src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight.min.js"></script>
+ 
+
+ 
+ <section class="section-1 con-min-width">
+ 
+ <div class="con">
+ 	
+ 	<div class="article-detail">
+          
+          <h2 class="article-detail__title">
+            7강. JAVA / 반복문
+          </h2>
+
+          <div class="article-detail__sub-info flex">
+            <div class="article-detail__board-name">JAVA</div>
+            <div class="article-detail__reg-date">
+              2021-01-25 17:11:43
+            </div>
+            <div class="article-detail__writer">
+              김규범
+            </div>
+          </div>
+          
+          <div class="article-detail__body main-font">
+              # 반복문
+```
+반복문이란 프로그램 내에서 똑같은 명령을 일정 횟수만큼 반복하여 수행하도록 제어하는 명령문입니다.
+프로그램이 처리하는 대부분의 코드는 반복적인 형태가 많으므로, 가장 많이 사용되는 제어문 중 하나입니다.
+
+- 반복문의 종류
+1. while
+2. dowhile
+3. for
+4. Enhanced for 
+```
+
+# while문
+```
+while 문은 특정 조건을 만족할 때까지 계속해서 주어진 명령문을 반복 실행
+while 문은 우선 조건식이 참(true)인지를 판단하여, 참이면 내부의 명령문을 실행한다.
+
+ex ) while문 5번 반복 실행
+
+int i = 0;
+
+while (i < 5) {
+
+ System.out.println("while 문이 " + (i + 1) + "번째 반복 실행중.");
+
+ i++; // 이 부분을 삭제하면 무한 루프에 빠지게 된다.
+
+}
+
+System.out.println(i); // while 문이 끝나고 난 후의 값
+
+// 결과
+
+while 문이 1번째 반복 실행중입니다.
+while 문이 2번째 반복 실행중입니다.
+while 문이 3번째 반복 실행중입니다.
+while 문이 4번째 반복 실행중입니다.
+while 문이 5번째 반복 실행중입니다.
+5
+
+
+# do/while 문
+```
+while 문은 루프에 진입하기 전에 먼저 조건식부터 검사합니다.
+하지만 do / while 문은 먼저 루프를 한 번 실행한 후에 조건식을 검사합니다.
+즉, do / while 문은 조건식의 결과와 상관없이 무조건 한 번은 루프를 실행합니다.
+
+ex )
+
+int i = 1, j = 1;
+
+ 
+
+while (i < 1) {
+    System.out.println("while 문이 " + i + "번째 반복 실행중입니다.");
+    i++; 
+}
+
+System.out.println("while 문이 종료된 후 변수 i의 값은 " + i + "입니다."); 
+
+do {
+    System.out.println("do / while 문이 " + i + "번째 반복 실행중입니다.");
+    j++; 
+} while (j < 1);
+System.out.println(j"); 
+
+// 결과 
+
+while 문이 종료된 후 변수 i의 값은 1입니다.
+do / while 문이 1번째 반복 실행중입니다.
+2
+```
+
+# for 문
+```
+for 문은 while 문과는 달리 자체적으로 초기식, 조건식, 증감식을 모두 포함하고 있는 반복문입니다.
+따라서 while 문보다는 좀 더 간결하게 반복문을 표현할 수 있습니다.
+
+ex )
+
+for (i = 0; i < 5; i++) {
+ System.out.println("for문 " + (i + 1) + "번 반복 실행.");
+}
+System.out.println("i");
+
+
+// 결과 
+
+for 문 1반복 실행.
+for 문 2반복 실행.
+for 문 3반복 실행.
+for 문 4반복 실행.
+for 문 5반복 실행.
+5
+```
+
+# Enhanced for 문
+```
+JDK 1.5부터 Enhanced for 문이라는 반복문이 추가되었습니다.
+이 반복문은 컬렉션 프레임워크와 배열에서 유용하게 자주 사용됩니다.
+```
+ 
+
+          </div>
+          
+          <div class="article-detail__reply-box">
+          <div id="disqus_thread"></div>
+			<script>
+			 var disqus_config = function() {
+				 this.page.url = 'https://ssg.gyubeom.com/article_detail_10.html';
+				 this.page.idenfifer = 'article_detail_10.html';
+			 };
+			 (function() { // DON'T EDIT BELOW THIS LINE
+   			 var d = document, s = d.createElement('script');
+   			 s.src = 'https://enkung.disqus.com/embed.js';
+   			 s.setAttribute('data-timestamp', +new Date());
+   			 (d.head || d.body).appendChild(s);
+   	 		})();
+			</script>
+			<noscript>Please enable JavaScript to view the 
+			<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+			</noscript>
+          </div>
+          
+          <div class="article-detail__menu flex">
+            <a  title="6강. JAVA / 조건문" href="article_detail_9.html" class="hover-underline ">&lt; 이전글</a>
+            <a href="article_list_it_1.html" class="hover-underline ">목록</a>
+            <a title="8강 JAVA / 배열" href="article_detail_11.html" class="hover-underline ">다음글 &gt;</a>
+          </div>
+        </div>
+        </div>
+      </section>
+
+</main>
+
+  <footer class="bottom-bar con-min-width">
+    <div class="con flex flex-ai-c">
+      <a href="#" class="logo logo--mini flex flex-ai-c">
+        <i class="fas fa-frog"></i>
+        <span>
+          K_<span></span>BLOG
+        </span>
+      </a>
+
+      <div class="bottom-bar__site-info">    
+      <i class="far fa-envelope"></i>
+      rbqja5597@naver.com
+      <br><br>
+      <i class="far fa-copyright"></i>
+        Copyright K_BLOG. All rights reserved.
+        
+        
+        
+        <span onclick="go_top();">
+        <i class="go-top">
+        <i class="fas fa-angle-up icons"></i>
+        </i>
+        </span>
+        
+        
+      </div>
+      
+
+    </div>
+    
+    
+  </footer>
+</div>
+<script src="app.js"></script>
+
+</body>
+</html>

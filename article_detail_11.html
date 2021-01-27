@@ -57,7 +57,7 @@
 <!-- 메타태그정보 //-->
 <!-- META -->
 <link rel="canonical" href="https://ssg.gyubeom.com" />
-<meta name="subject" content="자유1"/>
+<meta name="subject" content="8강 JAVA / 배열"/>
 <meta name="title" content="K_BLOG" />
 <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
 <meta name="copyright" content="K_BLOG" />
@@ -66,11 +66,47 @@
 <!-- OPENGRAPH -->
 <meta property="og:site_name" content="K_BLOG" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="자유1" />
-<meta property="og:description" content=" 자유게시판
+<meta property="og:title" content="8강 JAVA / 배열" />
+<meta property="og:description" content=" 배열 
+
+배열array은 같은 타입의 변수들로 이루어진 유한 집합으로 정의할 수 있습니다
+배열을 구성하는 각각의 값을 배열 요소element라고 하며 배열에서의 위치를 가리키는 숫자를 인덱스index라고 합니다
+자바에서 인덱스는 언제나 0부터 시작하며 0을 포함한 양의 정수만을 가질 수 있습니다
 
 
-자유게시판입니다
+ 1차원 배열
+
+ 문법
+1 타입 배열이름
+2 타입 배열이름
+3 배열이름  new 타입배열길이
+4 타입 배열이름  new 타입배열길이
+
+ex int 형 데이터 3개 저장하는 배열
+
+int grade1  new int3  길이가 3인 int형 배열의 선언 및 생성
+int grade2  new int3  길이가 3인 int형 배열의 선언 및 생성
+
+grade10  85  인덱스를 이용한 배열의 초기화
+grade11  65
+grade12  90
+
+grade20  85  배열의 길이보다 적은 수의 배열 요소만 초기화
+
+for int i  0 i  grade1length i 
+ Systemoutprintgrade1i     인덱스를 이용한 배열로의 접근
+
+
+for int i  0 i  grade2length i 
+ Systemoutprintgrade2i     인덱스를 이용한 배열로의 접근
+
+
+
+ 결과 
+
+85 65 90 
+85 0 0 
+
 " />
 <meta property="og:locale" content="ko_KR" />
 <meta property="og:image" content="/img/logo/logo_opengraph.png" />
@@ -82,22 +118,94 @@
 <meta property="og:url" content="https://ssg.gyubeom.com" />
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="자유1" />
+<meta name="twitter:title" content="8강 JAVA / 배열" />
 <meta name="twitter:site" content="@K_BLOG" />
 <meta name="twitter:creator" content="@K_BLOG" />
 <meta name="twitter:image" content="/img/logo/logo_opengraph.png">
-<meta name="twitter:description" content=" 자유게시판
+<meta name="twitter:description" content=" 배열 
+
+배열array은 같은 타입의 변수들로 이루어진 유한 집합으로 정의할 수 있습니다
+배열을 구성하는 각각의 값을 배열 요소element라고 하며 배열에서의 위치를 가리키는 숫자를 인덱스index라고 합니다
+자바에서 인덱스는 언제나 0부터 시작하며 0을 포함한 양의 정수만을 가질 수 있습니다
 
 
-자유게시판입니다
+ 1차원 배열
+
+ 문법
+1 타입 배열이름
+2 타입 배열이름
+3 배열이름  new 타입배열길이
+4 타입 배열이름  new 타입배열길이
+
+ex int 형 데이터 3개 저장하는 배열
+
+int grade1  new int3  길이가 3인 int형 배열의 선언 및 생성
+int grade2  new int3  길이가 3인 int형 배열의 선언 및 생성
+
+grade10  85  인덱스를 이용한 배열의 초기화
+grade11  65
+grade12  90
+
+grade20  85  배열의 길이보다 적은 수의 배열 요소만 초기화
+
+for int i  0 i  grade1length i 
+ Systemoutprintgrade1i     인덱스를 이용한 배열로의 접근
+
+
+for int i  0 i  grade2length i 
+ Systemoutprintgrade2i     인덱스를 이용한 배열로의 접근
+
+
+
+ 결과 
+
+85 65 90 
+85 0 0 
+
 " />
 <!-- GOOGLE+ -->
 <meta itemprop="headline" content="K_BLOG" />
 <meta itemprop="name" content="K_BLOG" />
-<meta itemprop="description" content=" 자유게시판
+<meta itemprop="description" content=" 배열 
+
+배열array은 같은 타입의 변수들로 이루어진 유한 집합으로 정의할 수 있습니다
+배열을 구성하는 각각의 값을 배열 요소element라고 하며 배열에서의 위치를 가리키는 숫자를 인덱스index라고 합니다
+자바에서 인덱스는 언제나 0부터 시작하며 0을 포함한 양의 정수만을 가질 수 있습니다
 
 
-자유게시판입니다
+ 1차원 배열
+
+ 문법
+1 타입 배열이름
+2 타입 배열이름
+3 배열이름  new 타입배열길이
+4 타입 배열이름  new 타입배열길이
+
+ex int 형 데이터 3개 저장하는 배열
+
+int grade1  new int3  길이가 3인 int형 배열의 선언 및 생성
+int grade2  new int3  길이가 3인 int형 배열의 선언 및 생성
+
+grade10  85  인덱스를 이용한 배열의 초기화
+grade11  65
+grade12  90
+
+grade20  85  배열의 길이보다 적은 수의 배열 요소만 초기화
+
+for int i  0 i  grade1length i 
+ Systemoutprintgrade1i     인덱스를 이용한 배열로의 접근
+
+
+for int i  0 i  grade2length i 
+ Systemoutprintgrade2i     인덱스를 이용한 배열로의 접근
+
+
+
+ 결과 
+
+85 65 90 
+85 0 0 
+
 " />
 <meta itemprop="image" content="/img/logo/logo_opengraph.png" />
 
@@ -106,7 +214,7 @@
 
 
 
-<title>자유1 K_BLOG | ARTICLE DETAIL</title>
+<title>8강 JAVA / 배열 K_BLOG | ARTICLE DETAIL</title>
 <!-- 폰트어썸 불러오기 -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -239,13 +347,13 @@
  	<div class="article-detail">
           
           <h2 class="article-detail__title">
-            자유1
+            8강 JAVA / 배열
           </h2>
 
           <div class="article-detail__sub-info flex">
-            <div class="article-detail__board-name">자유</div>
+            <div class="article-detail__board-name">JAVA</div>
             <div class="article-detail__reg-date">
-              2021-01-04 04:31:20
+              2021-01-27 21:35:01
             </div>
             <div class="article-detail__writer">
               김규범
@@ -253,19 +361,55 @@
           </div>
           
           <div class="article-detail__body main-font">
-              # 자유게시판
+              # 배열 
+```
+배열(array)은 같은 타입의 변수들로 이루어진 유한 집합으로 정의할 수 있습니다.
+배열을 구성하는 각각의 값을 배열 요소(element)라고 하며, 배열에서의 위치를 가리키는 숫자를 인덱스(index)라고 합니다.
+자바에서 인덱스는 언제나 0부터 시작하며, 0을 포함한 양의 정수만을 가질 수 있습니다
+```
 
+# 1차원 배열
 ```
-자유게시판입니다.
+- 문법
+1. 타입[] 배열이름;
+2. 타입 배열이름[];
+3. 배열이름 = new 타입[배열길이];
+4. 타입[] 배열이름 = new 타입[배열길이];
+
+ex) int 형 데이터 3개 저장하는 배열
+
+int[] grade1 = new int[3]; // 길이가 3인 int형 배열의 선언 및 생성
+int[] grade2 = new int[3]; // 길이가 3인 int형 배열의 선언 및 생성
+
+grade1[0] = 85; // 인덱스를 이용한 배열의 초기화
+grade1[1] = 65;
+grade1[2] = 90;
+
+grade2[0] = 85; // 배열의 길이보다 적은 수의 배열 요소만 초기화
+
+for (int i = 0; i < grade1.length; i++) {
+ System.out.print(grade1[i] + " "); // 인덱스를 이용한 배열로의 접근
+}
+
+for (int i = 0; i < grade2.length; i++) {
+ System.out.print(grade2[i] + " "); // 인덱스를 이용한 배열로의 접근
+}
+
+
+// 결과 
+
+85 65 90 
+85 0 0 
 ```
+
           </div>
           
           <div class="article-detail__reply-box">
           <div id="disqus_thread"></div>
 			<script>
 			 var disqus_config = function() {
-				 this.page.url = 'https://ssg.gyubeom.com/article_detail_2.html';
-				 this.page.idenfifer = 'article_detail_2.html';
+				 this.page.url = 'https://ssg.gyubeom.com/article_detail_11.html';
+				 this.page.idenfifer = 'article_detail_11.html';
 			 };
 			 (function() { // DON'T EDIT BELOW THIS LINE
    			 var d = document, s = d.createElement('script');
@@ -280,9 +424,9 @@
           </div>
           
           <div class="article-detail__menu flex">
-            <a  title="" href="article_detail_0.html" class="hover-underline none">&lt; 이전글</a>
-            <a href="article_list_free_1.html" class="hover-underline ">목록</a>
-            <a title="자유2" href="article_detail_3.html" class="hover-underline ">다음글 &gt;</a>
+            <a  title="7강. JAVA / 반복문" href="article_detail_10.html" class="hover-underline ">&lt; 이전글</a>
+            <a href="article_list_it_1.html" class="hover-underline ">목록</a>
+            <a title="" href="article_detail_0.html" class="hover-underline none">다음글 &gt;</a>
           </div>
         </div>
         </div>
