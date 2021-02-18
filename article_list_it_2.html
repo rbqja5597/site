@@ -61,8 +61,8 @@
 <meta name="title" content="K_BLOG" />
 <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
 <meta name="copyright" content="K_BLOG" />
-<meta name="pubdate" content="2021-02-18T09:05:21" />
-<meta name="lastmod" content="2021-02-18T09:05:21" />
+<meta name="pubdate" content="2021-02-18T09:05:20" />
+<meta name="lastmod" content="2021-02-18T09:05:20" />
 <!-- OPENGRAPH -->
 <meta property="og:site_name" content="K_BLOG" />
 <meta property="og:type" content="website" />
@@ -73,8 +73,8 @@
 <meta property="og:image:alt" content="ssg.gyubeom.com" />
 <meta property="og:image:width" content="486" />
 <meta property="og:image:height" content="254" />
-<meta property="og:updated_time" content="2021-02-18T09:05:21"/>
-<meta property="og:pubdate" content="2021-02-18T09:05:21" />
+<meta property="og:updated_time" content="2021-02-18T09:05:20"/>
+<meta property="og:pubdate" content="2021-02-18T09:05:20" />
 <meta property="og:url" content="https://ssg.gyubeom.com" />
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image" />
@@ -94,7 +94,7 @@
 
 
 
-<title> K_BLOG | ARTICLE SEARCH</title>
+<title> K_BLOG | ARTICLE LIST IT</title>
 <!-- 폰트어썸 불러오기 -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -195,7 +195,7 @@
   <main class="flex-grow-1">
     <section class="title-bar con-min-width">
       <h1 class="con">
-      		<i class="fas fa-search"></i> <span>ARTICLE SEARCH</span>
+      		<i class="fas fa-clipboard-list"></i> <span> IT 게시판 </span>
       </h1>
     </section>
 
@@ -205,20 +205,8 @@
 	
  
 
-<!-- lodash 불러오기 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
-
-<!-- vue 불러오기 -->
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-
- <section id="article-list-wrap" class="section-1 con-min-width">
+ <section class="section-1 con-min-width">
       <div class="con">
-       <div class="article-search">
-          <form class="block">
-            <input @input="searchKeywordInputed" type="text" placeholder="검색어" :value="searchKeyword">
-          </form>
-        </div>
-      
         <div class="article-list">
           <header>
             <div>
@@ -229,21 +217,17 @@
             </div>
           </header>
           <div class="main">
-            <div v-for="article in filtered">
-              <div class="article-list__cell-id">{{article.id}}</div>
-              <div class="article-list__cell-reg-date">{{article.regDate}}</div>
-              <div class="article-list__cell-writer">{{article.writer}}</div>
-              <div class="article-list__cell-title">
-                <a :href="'article_detail_' + article.id + '.html'" target="_blank" class="hover-underline">{{article.title}}</a>
-              </div>
-            </div>
+           		<div><div class="article-list__cell-id">5</div><div class="article-list__cell-reg-date">2021-01-06 15:51:01</div><div class="article-list__cell-writer">김규범</div><div class="article-list__cell-title"><a href="article_detail_5.html" class="hover-underline">2강. JAVA / 변수</a></div></div><div><div class="article-list__cell-id">4</div><div class="article-list__cell-reg-date">2021-01-04 04:31:20</div><div class="article-list__cell-writer">김규범</div><div class="article-list__cell-title"><a href="article_detail_4.html" class="hover-underline">1강. JAVA란?</a></div></div> 
           </div>
         </div>
+        
+        <div class="article-page-menu">
+          <ul class="flex flex-jc-c">
+           		<li><a href="article_list_it_1.html" class="flex flex-ai-c ">1</a></li><li><a href="article_list_it_2.html" class="flex flex-ai-c article-page-menu__link--selected">2</a></li> 
+          </ul>
+        </div>
       </div>
-    </section>
-    
-    
- <script src="article_search.js"></script></main>
+    </section></main>
 
   <footer class="bottom-bar con-min-width">
     <div class="con flex flex-ai-c">

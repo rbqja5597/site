@@ -57,7 +57,7 @@
 <!-- 메타태그정보 //-->
 <!-- META -->
 <link rel="canonical" href="https://ssg.gyubeom.com" />
-<meta name="subject" content="9강 JAVA / 다차원 배열"/>
+<meta name="subject" content="12강 JAVA / 메소드의 개념"/>
 <meta name="title" content="K_BLOG" />
 <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
 <meta name="copyright" content="K_BLOG" />
@@ -66,32 +66,49 @@
 <!-- OPENGRAPH -->
 <meta property="og:site_name" content="K_BLOG" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="9강 JAVA / 다차원 배열" />
-<meta property="og:description" content=" 다차원 배열 
+<meta property="og:title" content="12강 JAVA / 메소드의 개념" />
+<meta property="og:description" content=" 메소드의 개념
 
-다차원 배열이란 2차원 이상의 배열을 의미하며 배열 요소로 또 다른 배열을 가지는 배열을 의미합니다
+ 메소드
+
+클래스에서 메소드method란 어떠한 특정 작업을 수행하기 위한 명령문의 집합이라 할 수 있다
+메소드를 사용하면 중복되는 코드의 반복적인 프로그래밍을 피할 수 있다
 
 
- 2차원 배열
+ 사용 목적
 
-2차원 배열이란 배열의 요소로 1차원 배열을 가지는 배열입니다
-자바에서는 2차원 배열을 나타내는 타입을 따로 제공하지 않습니다
+클래스에서 메소드를 작성하여 사용하는 이유는 중복되는 코드의 반복적인 프로그래밍을 피할 수 있기 때문입니다
+또한 모듈화로 인해 코드의 가독성도 좋아집니다
+그리고 프로그램에 문제가 발생하거나 기능의 변경이 필요할 때도 손쉽게 유지보수를 할 수 있게 됩니다
 
-ex 
 
-int arr  new int23
+ 메소드 정의
 
-int k  10
-for int i  0 i  arrlength i 
-    for int j  0 j  arrilength j 
-        arrij  k  인덱스를 이용한 초기화
-        k  10
+클래스에서 메소드를 정의하는 방법은 일반 함수를 정의하는 방법과 크게 다르지 않습니다
+
+Car 클래스의 accelerate 메소드를 정의하는 예제 
+
+class Car 
+    private int currentSpeed
+    private int accelerationTime
+    
+  public void accelerateint speed int second   선언부
+         구현부
+        Systemoutprintlnsecond  초간 속도를 시속   speed  으로 가속함
+    
     
 
 
-결과  10 20 30
+
+ 메소드 호출
 
 
+자바에서는 위와 같은 방법으로 정의한 메소드는 멤버 참조 연산자를 사용하여 호출할 수 있습니다
+
+ex 
+
+Car myCar  new Car    객체를 생성함
+myCaraccelerate60 3  myCar 인스턴스의 accelerate 메소드를 호출함
 " />
 <meta property="og:locale" content="ko_KR" />
 <meta property="og:image" content="/img/logo/logo_opengraph.png" />
@@ -103,64 +120,98 @@ for int i  0 i  arrlength i
 <meta property="og:url" content="https://ssg.gyubeom.com" />
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="9강 JAVA / 다차원 배열" />
+<meta name="twitter:title" content="12강 JAVA / 메소드의 개념" />
 <meta name="twitter:site" content="@K_BLOG" />
 <meta name="twitter:creator" content="@K_BLOG" />
 <meta name="twitter:image" content="/img/logo/logo_opengraph.png">
-<meta name="twitter:description" content=" 다차원 배열 
+<meta name="twitter:description" content=" 메소드의 개념
 
-다차원 배열이란 2차원 이상의 배열을 의미하며 배열 요소로 또 다른 배열을 가지는 배열을 의미합니다
+ 메소드
+
+클래스에서 메소드method란 어떠한 특정 작업을 수행하기 위한 명령문의 집합이라 할 수 있다
+메소드를 사용하면 중복되는 코드의 반복적인 프로그래밍을 피할 수 있다
 
 
- 2차원 배열
+ 사용 목적
 
-2차원 배열이란 배열의 요소로 1차원 배열을 가지는 배열입니다
-자바에서는 2차원 배열을 나타내는 타입을 따로 제공하지 않습니다
+클래스에서 메소드를 작성하여 사용하는 이유는 중복되는 코드의 반복적인 프로그래밍을 피할 수 있기 때문입니다
+또한 모듈화로 인해 코드의 가독성도 좋아집니다
+그리고 프로그램에 문제가 발생하거나 기능의 변경이 필요할 때도 손쉽게 유지보수를 할 수 있게 됩니다
 
-ex 
 
-int arr  new int23
+ 메소드 정의
 
-int k  10
-for int i  0 i  arrlength i 
-    for int j  0 j  arrilength j 
-        arrij  k  인덱스를 이용한 초기화
-        k  10
+클래스에서 메소드를 정의하는 방법은 일반 함수를 정의하는 방법과 크게 다르지 않습니다
+
+Car 클래스의 accelerate 메소드를 정의하는 예제 
+
+class Car 
+    private int currentSpeed
+    private int accelerationTime
+    
+  public void accelerateint speed int second   선언부
+         구현부
+        Systemoutprintlnsecond  초간 속도를 시속   speed  으로 가속함
+    
     
 
 
-결과  10 20 30
+
+ 메소드 호출
 
 
+자바에서는 위와 같은 방법으로 정의한 메소드는 멤버 참조 연산자를 사용하여 호출할 수 있습니다
+
+ex 
+
+Car myCar  new Car    객체를 생성함
+myCaraccelerate60 3  myCar 인스턴스의 accelerate 메소드를 호출함
 " />
 <!-- GOOGLE+ -->
 <meta itemprop="headline" content="K_BLOG" />
 <meta itemprop="name" content="K_BLOG" />
-<meta itemprop="description" content=" 다차원 배열 
+<meta itemprop="description" content=" 메소드의 개념
 
-다차원 배열이란 2차원 이상의 배열을 의미하며 배열 요소로 또 다른 배열을 가지는 배열을 의미합니다
+ 메소드
+
+클래스에서 메소드method란 어떠한 특정 작업을 수행하기 위한 명령문의 집합이라 할 수 있다
+메소드를 사용하면 중복되는 코드의 반복적인 프로그래밍을 피할 수 있다
 
 
- 2차원 배열
+ 사용 목적
 
-2차원 배열이란 배열의 요소로 1차원 배열을 가지는 배열입니다
-자바에서는 2차원 배열을 나타내는 타입을 따로 제공하지 않습니다
+클래스에서 메소드를 작성하여 사용하는 이유는 중복되는 코드의 반복적인 프로그래밍을 피할 수 있기 때문입니다
+또한 모듈화로 인해 코드의 가독성도 좋아집니다
+그리고 프로그램에 문제가 발생하거나 기능의 변경이 필요할 때도 손쉽게 유지보수를 할 수 있게 됩니다
 
-ex 
 
-int arr  new int23
+ 메소드 정의
 
-int k  10
-for int i  0 i  arrlength i 
-    for int j  0 j  arrilength j 
-        arrij  k  인덱스를 이용한 초기화
-        k  10
+클래스에서 메소드를 정의하는 방법은 일반 함수를 정의하는 방법과 크게 다르지 않습니다
+
+Car 클래스의 accelerate 메소드를 정의하는 예제 
+
+class Car 
+    private int currentSpeed
+    private int accelerationTime
+    
+  public void accelerateint speed int second   선언부
+         구현부
+        Systemoutprintlnsecond  초간 속도를 시속   speed  으로 가속함
+    
     
 
 
-결과  10 20 30
+
+ 메소드 호출
 
 
+자바에서는 위와 같은 방법으로 정의한 메소드는 멤버 참조 연산자를 사용하여 호출할 수 있습니다
+
+ex 
+
+Car myCar  new Car    객체를 생성함
+myCaraccelerate60 3  myCar 인스턴스의 accelerate 메소드를 호출함
 " />
 <meta itemprop="image" content="/img/logo/logo_opengraph.png" />
 
@@ -169,7 +220,7 @@ for int i  0 i  arrlength i
 
 
 
-<title>9강 JAVA / 다차원 배열 K_BLOG | ARTICLE DETAIL</title>
+<title>12강 JAVA / 메소드의 개념 K_BLOG | ARTICLE DETAIL</title>
 <!-- 폰트어썸 불러오기 -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -308,13 +359,13 @@ for int i  0 i  arrlength i
  	<div class="article-detail">
           
           <h2 class="article-detail__title">
-            9강 JAVA / 다차원 배열
+            12강 JAVA / 메소드의 개념
           </h2>
 
           <div class="article-detail__sub-info flex">
             <div class="article-detail__board-name">JAVA</div>
             <div class="article-detail__reg-date">
-              2021-02-01 16:31:45
+              2021-02-17 19:02:03
             </div>
             <div class="article-detail__writer">
               김규범
@@ -322,40 +373,57 @@ for int i  0 i  arrlength i
           </div>
           
           <div class="article-detail__body main-font">
-              # 다차원 배열 
+              # 메소드의 개념
+
+# 메소드
 ```
-다차원 배열이란 2차원 이상의 배열을 의미하며, 배열 요소로 또 다른 배열을 가지는 배열을 의미합니다.
+클래스에서 메소드(method)란 어떠한 특정 작업을 수행하기 위한 명령문의 집합이라 할 수 있다.
+메소드를 사용하면 중복되는 코드의 반복적인 프로그래밍을 피할 수 있다.
 ```
 
-# 2차원 배열
+# 사용 목적
 ```
-2차원 배열이란 배열의 요소로 1차원 배열을 가지는 배열입니다.
-자바에서는 2차원 배열을 나타내는 타입을 따로 제공하지 않습니다.
+클래스에서 메소드를 작성하여 사용하는 이유는 중복되는 코드의 반복적인 프로그래밍을 피할 수 있기 때문입니다.
+또한, 모듈화로 인해 코드의 가독성도 좋아집니다.
+그리고 프로그램에 문제가 발생하거나 기능의 변경이 필요할 때도 손쉽게 유지보수를 할 수 있게 됩니다.
+```
 
-ex) 
+# 메소드 정의
+```
+클래스에서 메소드를 정의하는 방법은 일반 함수를 정의하는 방법과 크게 다르지 않습니다.
 
-int[][] arr = new int[2][3];
-
-int k = 10;
-for (int i = 0; i < arr.length; i++) {
-    for (int j = 0; j < arr[i].length; j++) {
-        arr[i][j] = k; // 인덱스를 이용한 초기화
-        k += 10;
+Car 클래스의 accelerate() 메소드를 정의하는 예제 
+--
+class Car {
+    private int currentSpeed;
+    private int accelerationTime;
+    ...
+①  public void accelerate(int speed, int second) { // 선언부
+        // 구현부
+        System.out.println(second + "초간 속도를 시속 " + speed + "(으)로 가속함!!");
     }
+    ...
 }
-
-결과 > 10 20 30
-
 ```
 
+# 메소드 호출
+
+```
+자바에서는 위와 같은 방법으로 정의한 메소드는 멤버 참조 연산자(.)를 사용하여 호출할 수 있습니다.
+
+ex )
+
+Car myCar = new Car();   // 객체를 생성함.
+myCar.accelerate(60, 3); // myCar 인스턴스의 accelerate() 메소드를 호출함.
+```
           </div>
           
           <div class="article-detail__reply-box">
           <div id="disqus_thread"></div>
 			<script>
 			 var disqus_config = function() {
-				 this.page.url = 'https://ssg.gyubeom.com/article_detail_12.html';
-				 this.page.idenfifer = 'article_detail_12.html';
+				 this.page.url = 'https://ssg.gyubeom.com/article_detail_15.html';
+				 this.page.idenfifer = 'article_detail_15.html';
 			 };
 			 (function() { // DON'T EDIT BELOW THIS LINE
    			 var d = document, s = d.createElement('script');
@@ -370,9 +438,9 @@ for (int i = 0; i < arr.length; i++) {
           </div>
           
           <div class="article-detail__menu flex">
-            <a  title="8강 JAVA / 배열" href="article_detail_11.html" class="hover-underline ">&lt; 이전글</a>
+            <a  title="11강 JAVA / 클래스의 구성요소" href="article_detail_14.html" class="hover-underline ">&lt; 이전글</a>
             <a href="article_list_it_1.html" class="hover-underline ">목록</a>
-            <a title="10강 JAVA / 클래스란?" href="article_detail_13.html" class="hover-underline ">다음글 &gt;</a>
+            <a title="" href="article_detail_0.html" class="hover-underline none">다음글 &gt;</a>
           </div>
         </div>
         </div>

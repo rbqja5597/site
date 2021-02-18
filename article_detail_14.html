@@ -57,7 +57,7 @@
 <!-- 메타태그정보 //-->
 <!-- META -->
 <link rel="canonical" href="https://ssg.gyubeom.com" />
-<meta name="subject" content="초보 개발자 일상 블로그"/>
+<meta name="subject" content="11강 JAVA / 클래스의 구성요소"/>
 <meta name="title" content="K_BLOG" />
 <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
 <meta name="copyright" content="K_BLOG" />
@@ -66,8 +66,32 @@
 <!-- OPENGRAPH -->
 <meta property="og:site_name" content="K_BLOG" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="초보 개발자 일상 블로그" />
-<meta property="og:description" content="일상 관련 글들을 공유합니다." />
+<meta property="og:title" content="11강 JAVA / 클래스의 구성요소" />
+<meta property="og:description" content=" 클래스 구성요소
+
+
+ 필드
+
+클래스의 필드field란 클래스에 포함된 변수variable를 의미합니다
+클래스 내에서 필드는 선언된 위치에 따라 다음과 같이 구분됩니다
+
+
+1 클래스 변수static variable
+2 인스턴스 변수instance variable
+3 지역 변수local variable
+
+
+ 메소드
+
+클래스에서 메소드method란 어떠한 특정 작업을 수행하기 위한 명령문의 집합이라 할 수 있다
+메소드를 사용하면 중복되는 코드의 반복적인 프로그래밍을 피할 수 있다
+
+
+ 생성자
+
+클래스를 가지고 객체를 생성하면 해당 객체는 메모리에 즉시 생성됩니다
+하지만 이렇게 생성된 객체는 모든 인스턴스 변수가 아직 초기화되지 않은 상태입니다
+" />
 <meta property="og:locale" content="ko_KR" />
 <meta property="og:image" content="/img/logo/logo_opengraph.png" />
 <meta property="og:image:alt" content="ssg.gyubeom.com" />
@@ -78,15 +102,63 @@
 <meta property="og:url" content="https://ssg.gyubeom.com" />
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="초보 개발자 일상 블로그" />
+<meta name="twitter:title" content="11강 JAVA / 클래스의 구성요소" />
 <meta name="twitter:site" content="@K_BLOG" />
 <meta name="twitter:creator" content="@K_BLOG" />
 <meta name="twitter:image" content="/img/logo/logo_opengraph.png">
-<meta name="twitter:description" content="일상 관련 글들을 공유합니다." />
+<meta name="twitter:description" content=" 클래스 구성요소
+
+
+ 필드
+
+클래스의 필드field란 클래스에 포함된 변수variable를 의미합니다
+클래스 내에서 필드는 선언된 위치에 따라 다음과 같이 구분됩니다
+
+
+1 클래스 변수static variable
+2 인스턴스 변수instance variable
+3 지역 변수local variable
+
+
+ 메소드
+
+클래스에서 메소드method란 어떠한 특정 작업을 수행하기 위한 명령문의 집합이라 할 수 있다
+메소드를 사용하면 중복되는 코드의 반복적인 프로그래밍을 피할 수 있다
+
+
+ 생성자
+
+클래스를 가지고 객체를 생성하면 해당 객체는 메모리에 즉시 생성됩니다
+하지만 이렇게 생성된 객체는 모든 인스턴스 변수가 아직 초기화되지 않은 상태입니다
+" />
 <!-- GOOGLE+ -->
 <meta itemprop="headline" content="K_BLOG" />
 <meta itemprop="name" content="K_BLOG" />
-<meta itemprop="description" content="일상 관련 글들을 공유합니다." />
+<meta itemprop="description" content=" 클래스 구성요소
+
+
+ 필드
+
+클래스의 필드field란 클래스에 포함된 변수variable를 의미합니다
+클래스 내에서 필드는 선언된 위치에 따라 다음과 같이 구분됩니다
+
+
+1 클래스 변수static variable
+2 인스턴스 변수instance variable
+3 지역 변수local variable
+
+
+ 메소드
+
+클래스에서 메소드method란 어떠한 특정 작업을 수행하기 위한 명령문의 집합이라 할 수 있다
+메소드를 사용하면 중복되는 코드의 반복적인 프로그래밍을 피할 수 있다
+
+
+ 생성자
+
+클래스를 가지고 객체를 생성하면 해당 객체는 메모리에 즉시 생성됩니다
+하지만 이렇게 생성된 객체는 모든 인스턴스 변수가 아직 초기화되지 않은 상태입니다
+" />
 <meta itemprop="image" content="/img/logo/logo_opengraph.png" />
 
 
@@ -94,7 +166,7 @@
 
 
 
-<title> K_BLOG | ARTICLE SEARCH</title>
+<title>11강 JAVA / 클래스의 구성요소 K_BLOG | ARTICLE DETAIL</title>
 <!-- 폰트어썸 불러오기 -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -195,7 +267,7 @@
   <main class="flex-grow-1">
     <section class="title-bar con-min-width">
       <h1 class="con">
-      		<i class="fas fa-search"></i> <span>ARTICLE SEARCH</span>
+      		<i class="fas fa-file-alt"></i> <span>게시물 상세</span>
       </h1>
     </section>
 
@@ -205,45 +277,104 @@
 	
  
 
-<!-- lodash 불러오기 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+<!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
 
-<!-- vue 불러오기 -->
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
- <section id="article-list-wrap" class="section-1 con-min-width">
-      <div class="con">
-       <div class="article-search">
-          <form class="block">
-            <input @input="searchKeywordInputed" type="text" placeholder="검색어" :value="searchKeyword">
-          </form>
-        </div>
-      
-        <div class="article-list">
-          <header>
-            <div>
-              <div class="article-list__cell-id">번호</div>
-              <div class="article-list__cell-reg-date">날짜</div>
-              <div class="article-list__cell-writer">작성자</div>
-              <div class="article-list__cell-title">제목</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
+<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+
+<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
+<!-- 토스트 UI 에디터, CSS 코어 -->
+<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+ 
+ <!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
+<script src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight.min.js"></script>
+ 
+
+ 
+ <section class="section-1 con-min-width">
+ 
+ <div class="con">
+ 	
+ 	<div class="article-detail">
+          
+          <h2 class="article-detail__title">
+            11강 JAVA / 클래스의 구성요소
+          </h2>
+
+          <div class="article-detail__sub-info flex">
+            <div class="article-detail__board-name">JAVA</div>
+            <div class="article-detail__reg-date">
+              2021-02-15 16:52:47
             </div>
-          </header>
-          <div class="main">
-            <div v-for="article in filtered">
-              <div class="article-list__cell-id">{{article.id}}</div>
-              <div class="article-list__cell-reg-date">{{article.regDate}}</div>
-              <div class="article-list__cell-writer">{{article.writer}}</div>
-              <div class="article-list__cell-title">
-                <a :href="'article_detail_' + article.id + '.html'" target="_blank" class="hover-underline">{{article.title}}</a>
-              </div>
+            <div class="article-detail__writer">
+              김규범
             </div>
           </div>
+          
+          <div class="article-detail__body main-font">
+              # 클래스 구성요소
+
+
+# 필드
+```
+클래스의 필드(field)란 클래스에 포함된 변수(variable)를 의미합니다.
+클래스 내에서 필드는 선언된 위치에 따라 다음과 같이 구분됩니다.
+
+
+1. 클래스 변수(static variable)
+2. 인스턴스 변수(instance variable)
+3. 지역 변수(local variable)
+```
+
+# 메소드
+```
+클래스에서 메소드(method)란 어떠한 특정 작업을 수행하기 위한 명령문의 집합이라 할 수 있다.
+메소드를 사용하면 중복되는 코드의 반복적인 프로그래밍을 피할 수 있다.
+```
+
+# 생성자
+```
+클래스를 가지고 객체를 생성하면, 해당 객체는 메모리에 즉시 생성됩니다.
+하지만 이렇게 생성된 객체는 모든 인스턴스 변수가 아직 초기화되지 않은 상태입니다.
+```
+          </div>
+          
+          <div class="article-detail__reply-box">
+          <div id="disqus_thread"></div>
+			<script>
+			 var disqus_config = function() {
+				 this.page.url = 'https://ssg.gyubeom.com/article_detail_14.html';
+				 this.page.idenfifer = 'article_detail_14.html';
+			 };
+			 (function() { // DON'T EDIT BELOW THIS LINE
+   			 var d = document, s = d.createElement('script');
+   			 s.src = 'https://enkung.disqus.com/embed.js';
+   			 s.setAttribute('data-timestamp', +new Date());
+   			 (d.head || d.body).appendChild(s);
+   	 		})();
+			</script>
+			<noscript>Please enable JavaScript to view the 
+			<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+			</noscript>
+          </div>
+          
+          <div class="article-detail__menu flex">
+            <a  title="10강 JAVA / 클래스란?" href="article_detail_13.html" class="hover-underline ">&lt; 이전글</a>
+            <a href="article_list_it_1.html" class="hover-underline ">목록</a>
+            <a title="12강 JAVA / 메소드의 개념" href="article_detail_15.html" class="hover-underline ">다음글 &gt;</a>
+          </div>
         </div>
-      </div>
-    </section>
-    
-    
- <script src="article_search.js"></script></main>
+        </div>
+      </section>
+
+</main>
 
   <footer class="bottom-bar con-min-width">
     <div class="con flex flex-ai-c">
